@@ -8,6 +8,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -21,6 +31,7 @@
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="nav-link" id="resume-download">Resume</a>
             </div>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -33,7 +44,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content fade-in">
                 <h1 class="hero-title">Kartik Virmani</h1>
                 <h2 class="hero-subtitle">Robotics Engineer & Research Assistant</h2>
                 <p class="hero-description">
@@ -45,13 +56,13 @@
                     <a href="#projects" class="btn btn-secondary">View Projects</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank">
+                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/virmani11kartik" target="_blank">
+                    <a href="https://github.com/virmani11kartik" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank">
+                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank" aria-label="ResearchGate">
                         <i class="fab fa-researchgate"></i>
                     </a>
                 </div>
@@ -62,9 +73,9 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text fade-in">
                     <p>
                         I'm a passionate Robotics Engineer currently pursuing my Master's degree at the University of Pennsylvania.
                         With a strong foundation in mechanical engineering and extensive experience in autonomous systems,
@@ -75,7 +86,7 @@
                         I have hands-on experience with ROS2, motion planning algorithms, and real-time embedded systems.
                     </p>
                 </div>
-                <div class="education">
+                <div class="education fade-in">
                     <h3>Education</h3>
                     <div class="edu-item">
                         <h4>Master of Science in Mechanical Engineering & Applied Mechanics</h4>
@@ -95,10 +106,10 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title fade-in">Professional Experience</h2>
             <div class="timeline">
                 <!-- MODLAB -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Research Assistant - Modular Robotics Lab (MODLAB)</h3>
@@ -113,7 +124,7 @@
                     </div>
                 </div>
                 <!-- X-Lab -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Research Assistant - X-Lab</h3>
@@ -128,7 +139,7 @@
                     </div>
                 </div>
                 <!-- Engineers India -->
-                <div class="timeline-item">
+                <div class="timeline-item fade-in">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>Mechanical Engineer</h3>
@@ -149,10 +160,10 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title fade-in">Projects</h2>
             <div class="projects-grid">
                 <!-- F1/10th Autonomous Vehicle Racing -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/f1tenth-racing','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/f1tenth-racing','_blank')">
                     <div class="project-header">
                         <h3>F1/10th Autonomous Vehicle Racing</h3>
                     </div>
@@ -164,8 +175,9 @@
                         <span class="tech-tag">MPC</span>
                     </div>
                 </div>
+                
                 <!-- Quadrotor Control & Vision-Based Localization -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/quadrotor-control','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/quadrotor-control','_blank')">
                     <div class="project-header">
                         <h3>Quadrotor Control & Vision Localization</h3>
                     </div>
@@ -177,8 +189,9 @@
                         <span class="tech-tag">Computer Vision</span>
                     </div>
                 </div>
+                
                 <!-- Grounded SLAM -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/grounded-slam','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/grounded-slam','_blank')">
                     <div class="project-header">
                         <h3>Grounded SLAM (Dynamic Filtering)</h3>
                     </div>
@@ -190,8 +203,9 @@
                         <span class="tech-tag">Python</span>
                     </div>
                 </div>
+                
                 <!-- Real-Time Visual SLAM -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/real-time-visual-slam','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/real-time-visual-slam','_blank')">
                     <div class="project-header">
                         <h3>Real-Time Visual SLAM & 3D Mapping</h3>
                     </div>
@@ -202,8 +216,9 @@
                         <span class="tech-tag">C++</span>
                     </div>
                 </div>
+                
                 <!-- SVG-MPPI -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/mppi_f1tenth_team4','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/mppi_f1tenth_team4','_blank')">
                     <div class="project-header">
                         <h3>SVG-MPPI: Autonomous Racing Control</h3>
                     </div>
@@ -215,8 +230,9 @@
                         <span class="tech-tag">C++</span>
                     </div>
                 </div>
+                
                 <!-- RL & MuJoCo -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/trajectory-rl','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/trajectory-rl','_blank')">
                     <div class="project-header">
                         <h3>Traj Opt & RL (MuJoCo + PPO)</h3>
                     </div>
@@ -227,8 +243,9 @@
                         <span class="tech-tag">PPO</span>
                     </div>
                 </div>
+                
                 <!-- UKF State Estimation -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/ukf-state-estimation','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/ukf-state-estimation','_blank')">
                     <div class="project-header">
                         <h3>UKF Vehicle State Estimation</h3>
                     </div>
@@ -238,8 +255,9 @@
                         <span class="tech-tag">Sensor Fusion</span>
                     </div>
                 </div>
+                
                 <!-- NeRF -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/nerf-pytorch','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/nerf-pytorch','_blank')">
                     <div class="project-header">
                         <h3>Neural Radiance Fields (NeRF)</h3>
                     </div>
@@ -250,8 +268,9 @@
                         <span class="tech-tag">3D Rendering</span>
                     </div>
                 </div>
+                
                 <!-- Physics-Informed MPC -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/physics-informed-mpc','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/physics-informed-mpc','_blank')">
                     <div class="project-header">
                         <h3>Physics-Informed NN MPC</h3>
                     </div>
@@ -262,8 +281,9 @@
                         <span class="tech-tag">Python</span>
                     </div>
                 </div>
+                
                 <!-- Quadruped MPC -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/quadruped-mpc','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/quadruped-mpc','_blank')">
                     <div class="project-header">
                         <h3>MPC for Quadruped Manipulators</h3>
                     </div>
@@ -274,8 +294,9 @@
                         <span class="tech-tag">MuJoCo</span>
                     </div>
                 </div>
+                
                 <!-- Robot Battle Area -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/robot-battle-area','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/robot-battle-area','_blank')">
                     <div class="project-header">
                         <h3>Robot Battle Area</h3>
                     </div>
@@ -286,8 +307,9 @@
                         <span class="tech-tag">Multiplayer</span>
                     </div>
                 </div>
+                
                 <!-- Penn-GRASP Robot -->
-                <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/penn-grasp-robot','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/penn-grasp-robot','_blank')">
                     <div class="project-header">
                         <h3>Penn-GRASP MEAM5100 Robot</h3>
                     </div>
@@ -298,8 +320,9 @@
                         <span class="tech-tag">WiFi</span>
                     </div>
                 </div>
+                
                 <!-- Vehicle Roll Control -->
-                <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
                     <div class="project-header">
                         <h3>Vehicle Excess Roll Control</h3>
                     </div>
@@ -309,8 +332,9 @@
                         <span class="tech-tag">Vehicle Dynamics</span>
                     </div>
                 </div>
+                
                 <!-- XFEM Crack Modeling -->
-                <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
                     <div class="project-header">
                         <h3>XFEM Crack Modeling</h3>
                     </div>
@@ -320,8 +344,9 @@
                         <span class="tech-tag">XFEM</span>
                     </div>
                 </div>
+                
                 <!-- CFD LMGTP -->
-                <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
                     <div class="project-header">
                         <h3>CFD of LMGTP Concept Car</h3>
                     </div>
@@ -331,19 +356,21 @@
                         <span class="tech-tag">CFD</span>
                     </div>
                 </div>
+                
                 <!-- Four-Wheel Steering -->
-                <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
                     <div class="project-header">
                         <h3>Four-Wheel Steering Mechanism</h3>
                     </div>
-                    <p>Designed rear-wheel steerable suspension in SolidWorks & ANSYS, validating safety under ≤700 N with GD&T-defined tolerances.</p>
+                    <p>Designed rear-wheel steerable suspension in SolidWorks & ANSYS, validating safety under ≤700 N with GD&T-defined tolerances.</p>
                     <div class="project-tech">
                         <span class="tech-tag">SolidWorks</span>
                         <span class="tech-tag">ANSYS</span>
                     </div>
                 </div>
+                
                 <!-- Clutch Plate Optimization -->
-                <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
                     <div class="project-header">
                         <h3>Clutch Plate Friction Optimization</h3>
                     </div>
@@ -353,7 +380,6 @@
                         <span class="tech-tag">FEA</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -361,10 +387,10 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title fade-in">Technical Skills</h2>
             <div class="skills-grid">
                 <!-- Programming -->
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-code"></i> Programming</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">C++</span>
@@ -377,7 +403,7 @@
                     </div>
                 </div>
                 <!-- Robotics & Control -->
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-robot"></i> Robotics & Control</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">SLAM</span>
@@ -389,7 +415,7 @@
                     </div>
                 </div>
                 <!-- Perception & AI -->
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-eye"></i> Perception & AI</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Computer Vision</span>
@@ -399,7 +425,7 @@
                     </div>
                 </div>
                 <!-- Tools & Simulation -->
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-cogs"></i> Tools & Simulation</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Gazebo</span>
@@ -417,9 +443,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title fade-in">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info fade-in">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -442,12 +468,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form fade-in">
                     <form>
-                        <div class="form-group"><input type="text" placeholder="Your Name" required></div>
-                        <div class="form-group"><input type="email" placeholder="Your Email" required></div>
-                        <div class="form-group"><input type="text" placeholder="Subject" required></div>
-                        <div class="form-group"><textarea placeholder="Your Message" rows="5" required></textarea></div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
@@ -458,48 +492,23 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content fade-in">
                 <p>&copy; 2025 Kartik Virmani. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/virmani11kartik" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/virmani11kartik" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank" aria-label="ResearchGate">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active'); navMenu.classList.remove('active');
-        }));
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        document.querySelectorAll('section, .project-card, .timeline-item').forEach(el => {
-            el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
