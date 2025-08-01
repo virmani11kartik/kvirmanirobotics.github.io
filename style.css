@@ -1,5 +1,5 @@
 /* Dark & Vibrant Theme for Portfolio */
-:root {
+[data-theme="dark"] {
   --bg: #121212;
   --card-bg: #1e1e1e;
   --nav-bg: #1b1b1b;
@@ -10,6 +10,19 @@
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   --transition: all 0.3s ease;
 }
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --card-bg: #f4f4f4;
+  --nav-bg: #f8f8f8;
+  --text: #121212;
+  --text-secondary: #555555;
+  --accent: #4a00e0;
+  --accent-hover: #6a00ff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
 
 html {
   scroll-behavior: smooth;
