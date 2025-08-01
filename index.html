@@ -146,95 +146,248 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>SVG-MPPI: Autonomous Racing Control</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/virmani11kartik/mppi_f1tenth_team4" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p>Implemented Stein Variational Guided MPPI for real-time trajectory optimization on 1/10-scale autonomous racecar, achieving 38.7m max error reduction.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">ROS2</span>
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">MPPI</span>
-                        <span class="tech-tag">LiDAR</span>
-                    </div>
-                </div>
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Grounded SLAM with Dynamic Object Filtering</h3>
-                    </div>
-                    <p>Integrated GroundingDINO and SAM for real-time RGB-D SLAM with dynamic object filtering, reducing ATE by 29.5% and improving map density by 81%.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">ORB-SLAM3</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Docker</span>
-                    </div>
+            <!-- F1/10th Autonomous Vehicle Racing -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/f1tenth-racing','_blank')">
+                <div class="project-header">
+                    <h3>F1/10th Autonomous Vehicle Racing</h3>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>F1/10th Autonomous Racing</h3>
-                    </div>
-                    <p>Developed full-stack ROS2 autonomy pipeline with motion planning, SLAM, and perception. Integrated LiDAR, IMU, and camera sensors for real-time racing.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">ROS2</span>
-                        <span class="tech-tag">SLAM</span>
-                        <span class="tech-tag">MPC</span>
-                        <span class="tech-tag">PyTorch</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Quadrotor Control & Vision Localization</h3>
-                    </div>
-                    <p>Developed vision-based localization system eliminating external motion-capture dependency. Implemented 3D path planning with A*, Dijkstra, and OMPL.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Computer Vision</span>
-                        <span class="tech-tag">OMPL</span>
-                        <span class="tech-tag">PID Control</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Neural Radiance Fields (NeRF)</h3>
-                    </div>
-                    <p>Implemented NeRF pipeline using PyTorch for novel view synthesis. Trained MLP with positional encoding and optimized volumetric ray marching.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">Deep Learning</span>
-                        <span class="tech-tag">Computer Vision</span>
-                        <span class="tech-tag">3D Rendering</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Physics-Informed Neural Network MPC</h3>
-                    </div>
-                    <p>Implemented MPC with neural networks for autonomous vehicles, reducing motion planning convergence time by 30% using GPU acceleration.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">CUDA</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">MPC</span>
-                        <span class="tech-tag">CarSim</span>
-                    </div>
+                <p>Built a full-stack ROS 2 autonomy pipeline in C++/Python integrating navigation, SLAM, motion planning (RRT, Pure Pursuit, MPC), and perception with LiDAR/IMU/RealSense on an F1/10 racecar. :contentReference[oaicite:18]{index=18}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">ROS 2</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">SLAM</span>
+                    <span class="tech-tag">MPC</span>
                 </div>
             </div>
+
+            <!-- Quadrotor Control, Dynamics, and Vision-Based Localization -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/quadrotor-control','_blank')">
+                <div class="project-header">
+                    <h3>Quadrotor Control & Vision-Based Localization</h3>
+                </div>
+                <p>Developed flight control algorithms in a custom physics simulator, tuned PID/MPC controllers (+20% stability), and implemented onboard computer-vision localization (no external motion capture). :contentReference[oaicite:19]{index=19}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PID/MPC</span>
+                    <span class="tech-tag">OMPL</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+
+            <!-- Grounded SLAM: Dynamic Object Filtering -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/grounded-slam','_blank')">
+                <div class="project-header">
+                    <h3>Grounded SLAM (ORB-SLAM3 + GroundingDINO)</h3>
+                </div>
+                <p>Integrated GroundingDINO, SAM, and Kalman Filters into ORB-SLAM3 for open-vocabulary dynamic object masking, reducing ATE by 29.5% and boosting map density by 81%. :contentReference[oaicite:20]{index=20}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">ORB-SLAM3</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+            </div>
+
+            <!-- Real-Time Visual SLAM & 3D Map Reconstruction -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/real-time-visual-slam','_blank')">
+                <div class="project-header">
+                    <h3>Real-Time Visual SLAM & 3D Map Reconstruction</h3>
+                </div>
+                <p>Streamed live RGB-D data from RealSense, ran ORB-SLAM3 for dense indoor mapping, and visualized pose + 3D occupancy in real time. :contentReference[oaicite:21]{index=21}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">ORB-SLAM3</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">RealSense</span>
+                    <span class="tech-tag">3D Mapping</span>
+                </div>
+            </div>
+
+            <!-- SVG-MPPI: Stein Variational Guided MPPI -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/mppi_f1tenth_team4','_blank')">
+                <div class="project-header">
+                    <h3>SVG-MPPI for Autonomous Racing</h3>
+                </div>
+                <p>Implemented Stein Variational Guided MPPI on an F1/10 platform, reducing max tracking error by 38.7 m and cross-track error to 0.855 m at 50 Hz ROS 2 rates. :contentReference[oaicite:22]{index=22}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">MPPI</span>
+                    <span class="tech-tag">SVGD</span>
+                    <span class="tech-tag">ROS 2</span>
+                    <span class="tech-tag">C++</span>
+                </div>
+            </div>
+
+            <!-- Trajectory Optimization & RL with MuJoCo & PPO -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/trajectory-rl','_blank')">
+                <div class="project-header">
+                    <h3>Trajectory Opt. & RL (MuJoCo + PPO)</h3>
+                </div>
+                <p>Built random-shooting MPC and PPO agents for Cartpole, Acrobot, Walker, and Humanoid in MuJoCo, achieving 700+ avg returns and smooth trajectory convergence. :contentReference[oaicite:23]{index=23}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">MuJoCo</span>
+                    <span class="tech-tag">MPC</span>
+                    <span class="tech-tag">PPO</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+            <!-- UKF-Based State Estimation -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/ukf-state-estimation','_blank')">
+                <div class="project-header">
+                    <h3>UKF-Based Vehicle State Estimation</h3>
+                </div>
+                <p>Developed an Unscented Kalman Filter framework fusing IMU, GPS, LiDAR, and encoders to cut localization drift by 30% over 1 km on a bicycle-model vehicle. :contentReference[oaicite:24]{index=24}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">UKF</span>
+                    <span class="tech-tag">Sensor Fusion</span>
+                    <span class="tech-tag">Carsim</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+            <!-- Neural Radiance Fields (NeRF) -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/nerf-pytorch','_blank')">
+                <div class="project-header">
+                    <h3>Neural Radiance Fields (NeRF)</h3>
+                </div>
+                <p>Implemented a NeRF pipeline in PyTorch for novel-view synthesis with positional encoding, hierarchical sampling, and PSNR/SSIM evaluation. :contentReference[oaicite:25]{index=25}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">3D Rendering</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+
+            <!-- Physics-Informed NN MPC -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/physics-informed-mpc','_blank')">
+                <div class="project-header">
+                    <h3>Physics-Informed NN MPC</h3>
+                </div>
+                <p>Combined neural networks with MPC for vehicle control in CarSim+MATLAB, cutting planning convergence time by 30% using CUDA GPU. :contentReference[oaicite:26]{index=26}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">MPC</span>
+                    <span class="tech-tag">CUDA</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CarSim</span>
+                </div>
+            </div>
+
+            <!-- Model Predictive Control for Quadrupeds -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/quadruped-mpc','_blank')">
+                <div class="project-header">
+                    <h3>MPC for Quadruped Manipulators</h3>
+                </div>
+                <p>Designed an MPC framework with Zero Momentum Control for stable quadruped locomotion in PyDrake/MuJoCo, boosting planning robustness by 8%. :contentReference[oaicite:27]{index=27}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">MPC</span>
+                    <span class="tech-tag">ZMC</span>
+                    <span class="tech-tag">MuJoCo</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+            <!-- The Robot Battle Area -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/robot-battle-area','_blank')">
+                <div class="project-header">
+                    <h3>Robot Battle Area (Multiplayer Arena)</h3>
+                </div>
+                <p>Created a C++ autonomous vehicle arena game with >90% task success, multi-agent ROS simulation, and collision-avoidance testing across hardware prototypes. :contentReference[oaicite:28]{index=28}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">ROS</span>
+                    <span class="tech-tag">Multiplayer</span>
+                    <span class="tech-tag">Simulation</span>
+                </div>
+            </div>
+
+            <!-- Penn-GRASP MEAM5100 Autonomous Mobile Robot -->
+            <div class="project-card clickable-card" onclick="window.open('https://github.com/virmani11kartik/penn-grasp-robot','_blank')">
+                <div class="project-header">
+                    <h3>Penn-GRASP MEAM5100 Autonomous Robot</h3>
+                </div>
+                <p>Built a modular ESP32 mobile robot with TOF sensors, H-Bridge drivers, PID encoder feedback, and WiFi-based multi-ESP32 communication for indoor navigation. :contentReference[oaicite:29]{index=29}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">ESP32</span>
+                    <span class="tech-tag">PID Control</span>
+                    <span class="tech-tag">WiFi</span>
+                    <span class="tech-tag">ROS 2</span>
+                </div>
+            </div>
+
+            <!-- Vehicle Excess Roll Detection & Control -->
+            <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-header">
+                    <h3>Vehicle Excess Roll Detection & Control</h3>
+                </div>
+                <p>Designed a PID-based roll correction system that detects >5° roll at ≥31 mph and applies steering adjustments, reducing rollover risk by 30%. :contentReference[oaicite:30]{index=30}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">PID</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Vehicle Dynamics</span>
+                </div>
+            </div>
+
+            <!-- XFEM Crack Modeling -->
+            <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-header">
+                    <h3>XFEM Crack Modeling</h3>
+                </div>
+                <p>Simulated thermal barrier coating cracks under cyclic heat loads in ABAQUS XFEM, informing material selection and geometry to optimize durability. :contentReference[oaicite:31]{index=31}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">ABAQUS</span>
+                    <span class="tech-tag">XFEM</span>
+                    <span class="tech-tag">FEA</span>
+                </div>
+            </div>
+
+            <!-- CFD Analysis of LMGTP Concept Car -->
+            <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-header">
+                    <h3>CFD of LMGTP Concept Car</h3>
+                </div>
+                <p>Ran transient RANS simulations in STAR-CCM+ to optimize undertray and diffuser aerodynamics across pitch angles, improving thermal‐air interaction and drag. :contentReference[oaicite:32]{index=32}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">STAR-CCM+</span>
+                    <span class="tech-tag">CFD</span>
+                    <span class="tech-tag">RANS</span>
+                </div>
+            </div>
+
+            <!-- Four-Wheel Steering Mechanism -->
+            <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-header">
+                    <h3>Four-Wheel Steering Mechanism</h3>
+                </div>
+                <p>Designed and simulated a rear-wheel steerable suspension in SolidWorks & ANSYS, validating safety factor under ≤700 N steering loads with GD&T‐defined clearances. :contentReference[oaicite:33]{index=33}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">SolidWorks</span>
+                    <span class="tech-tag">ANSYS</span>
+                    <span class="tech-tag">FEA</span>
+                    <span class="tech-tag">GD&T</span>
+                </div>
+            </div>
+
+            <!-- Clutch Plate Friction Lining Optimization -->
+            <div class="project-card clickable-card" onclick="window.open('#','_blank')">
+                <div class="project-header">
+                    <h3>Clutch Plate Friction Lining Optimization</h3>
+                </div>
+                <p>Modeled heat dissipation and wear in ANSYS, optimized friction geometry under thermal‐mechanical loads, and guided material selection to reduce fatigue. :contentReference[oaicite:34]{index=34}</p>
+                <div class="project-tech">
+                    <span class="tech-tag">ANSYS</span>
+                    <span class="tech-tag">FEA</span>
+                    <span class="tech-tag">Thermal Analysis</span>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
