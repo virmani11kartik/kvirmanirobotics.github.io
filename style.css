@@ -9,10 +9,11 @@
   --accent-hover: #9e6cff;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   --transition: all 0.3s ease;
+  --hero-bg: linear-gradient(135deg, #272727 0%, #1e1e1e 100%);
 }
 
 [data-theme="light"] {
-  --bg: #ffffff;
+  --bg: #e974e9;
   --card-bg: #cc5792;
   --nav-bg: #f8f8f8;
   --text: #121212;
@@ -21,6 +22,7 @@
   --accent-hover: #6a00ff;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --hero-bg: linear-gradient(135deg, #f9c2eb 0%, #fbd6f3 100%);
 }
 
 html {
@@ -161,7 +163,7 @@ nav.navbar {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #272727 0%, #1e1e1e 100%);
+  background: var(--hero-bg);
   padding: 4rem 1.5rem;
   text-align: center;
 }
