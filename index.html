@@ -1,164 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kartik Virmani | Portfolio</title>
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartik Virmani - Robotics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <div class="container nav-content">
-      <div class="logo">Kartik Virmani</div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#extracurricular">Extracurricular</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button id="toggle-dark" aria-label="Toggle Dark Mode">🌙</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <main>
-    <section id="about" class="container">
-      <div class="about-flex">
-        <div>
-          <h1>Hi, I'm Kartik!</h1>
-          <p>
-            Robotics & Mechatronics Engineer at University of Pennsylvania.<br>
-            Specializing in autonomous vehicles, motion planning, SLAM, and intelligent robot systems.<br>
-            Driven by curiosity and real-world impact.
-          </p>
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/virmani11kartik" target="_blank">GitHub</a>
-            <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank">ResearchGate</a>
-            <a href="meam_robo_master_resume_kartik.pdf" download>Download Resume</a>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Kartik Virmani</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Kartik Virmani</h1>
+                <h2 class="hero-subtitle">Robotics Engineer & Research Assistant</h2>
+                <p class="hero-description">
+                    MS in Mechanical Engineering & Applied Mechanics at University of Pennsylvania,
+                    specializing in Mechatronics, Robotics, and Autonomous Systems
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/virmani11kartik" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="skills" class="container">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div>
-          <h3>Programming</h3>
-          <p>C++, Python (JAX, TensorFlow, PyTorch), MATLAB, ROS2, Dynamic Programming, CI/CD</p>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Robotics Engineer currently pursuing my Master's degree at the University of Pennsylvania. 
+                        With a strong foundation in mechanical engineering and extensive experience in autonomous systems, 
+                        I specialize in developing cutting-edge robotics solutions.
+                    </p>
+                    <p>
+                        My research focuses on mobile humanoid robots, autonomous vehicle racing, and advanced control systems. 
+                        I have hands-on experience with ROS2, motion planning algorithms, and real-time embedded systems.
+                    </p>
+                </div>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <h4>Master of Science in Mechanical Engineering & Applied Mechanics</h4>
+                        <p><strong>University of Pennsylvania</strong> • May 2026</p>
+                        <p>Concentration: Mechatronics & Robotics</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Bachelor of Technology in Mechanical Engineering</h4>
+                        <p><strong>VIT-Vellore Institute of Technology</strong> • May 2022</p>
+                        <p>GPA: 9.73/10.00</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <h3>Robotics & Systems</h3>
-          <p>Path Planning, MPC, PID, FSM, Behavior Trees, SLAM, State Estimation</p>
-        </div>
-        <div>
-          <h3>Design & Simulation</h3>
-          <p>SolidWorks, CATIA, ANSYS, ABAQUS, FEA, CarSim, Fusion 360</p>
-        </div>
-        <div>
-          <h3>Fabrication & Integration</h3>
-          <p>3D Printing, CNC, Laser Cutting, Wiring, PCB Prototyping, Embedded Systems</p>
-        </div>
-      </div>
     </section>
-    
-    <section id="experience" class="container">
-      <h2>Professional Experience</h2>
-      <div class="exp-entry">
-        <h3>Modular Robotics Lab (MODLAB), University of Pennsylvania <span>Research Assistant | May 2025 – Present</span></h3>
-        <ul>
-          <li>Engineered passively stable humanoid robots; designed nonlinear controllers and real-time sensor fusion.</li>
-          <li>Prototyped parts, programmed IMU/encoder integration, and optimized balance on uneven terrain.</li>
-        </ul>
-      </div>
-      <div class="exp-entry">
-        <h3>X-Lab, University of Pennsylvania <span>Research Assistant | Feb 2025 – Present</span></h3>
-        <ul>
-          <li>Developed ROS2 motion planning/control pipelines (C++/Python) for F1-tenth robots; integrated MoveIt 2/OMPL.</li>
-          <li>Implemented 3D LiDAR for terrain estimation, advanced control for rough surfaces, and perception-to-action pipelines.</li>
-        </ul>
-      </div>
-      <div class="exp-entry">
-        <h3>Engineers India Limited <span>Mechanical Engineer | Jul 2022 – Jul 2024</span></h3>
-        <ul>
-          <li>Led actuator integration for $120M plant automation; improved system efficiency by 15% via predictive maintenance.</li>
-          <li>Developed test protocols, performed FEA, and managed DFM/GD&T for prototypes and production equipment.</li>
-        </ul>
-      </div>
-      <div class="exp-entry">
-        <h3>Centre of Excellence for Autonomous Vehicles Research, VIT <span>Research Assistant | Jul 2021 – Dec 2021</span></h3>
-        <ul>
-          <li>Developed L3 autonomous vehicle motor control, sensor fusion, and embedded routines in Python/C++.</li>
-          <li>Modeled, prototyped, and validated steering/braking subsystems using force/vision sensor fusion.</li>
-        </ul>
-      </div>
-    </section>
-    
-    <section id="projects" class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>F1/10th Autonomous Vehicle Racing</h3>
-          <ul>
-            <li>Developed full-stack ROS2 pipeline; implemented RRT, Pure Pursuit, and MPC for racing tasks.</li>
-            <li>State estimation using sensor fusion (LiDAR, IMU, GNSS) for real-time localization.</li>
-            <li><a href="https://github.com/virmani11kartik/mppi_f1tenth_team4" target="_blank">Project Code</a></li>
-          </ul>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant - Modular Robotics Lab (MODLAB)</h3>
+                        <h4>University of Pennsylvania</h4>
+                        <span class="timeline-date">May 2025 - Present</span>
+                        <ul>
+                            <li>Engineered passively stable mobile humanoid robots by lowering center of mass</li>
+                            <li>Developed ROS Gazebo simulation modeling nonlinear pendulum dynamics</li>
+                            <li>Implemented nonlinear control algorithms including energy-shaping and feedback linearization</li>
+                            <li>Prototyped mechanical parts and integrated IMU sensors for real-time control</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant - X-Lab</h3>
+                        <h4>University of Pennsylvania</h4>
+                        <span class="timeline-date">February 2025 - Present</span>
+                        <ul>
+                            <li>Developed ROS 2 motion control pipelines in C++/Python for F1-tenth racing</li>
+                            <li>Implemented 3D trajectory generation using system dynamics optimization</li>
+                            <li>Applied AI, FSM, and behavior trees for autonomous vehicle decision-making</li>
+                            <li>Collaborated on FANUC robotics manipulator control systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Mechanical Engineer</h3>
+                        <h4>Engineers India Limited</h4>
+                        <span class="timeline-date">July 2022 - July 2024</span>
+                        <ul>
+                            <li>Led mechanical automation for $120M plant with 99% uptime achievement</li>
+                            <li>Designed mechatronic hardware systems (PLC, PID, sensor fusion)</li>
+                            <li>Reduced system downtime by 15% through predictive maintenance strategies</li>
+                            <li>Optimized manufacturability and reduced production lead time by 15%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-          <h3>Quadrotor Control & Vision-Based Localization</h3>
-          <ul>
-            <li>Developed 3D path planning, trajectory optimization, and PID control for quadrotors.</li>
-            <li>Implemented onboard vision-based localization and custom physics-based simulator.</li>
-          </ul>
-        </div>
-        <div class="project-card">
-          <h3>ORB-SLAM3 Dynamic Object Filtering</h3>
-          <ul>
-            <li>Integrated GroundingDINO, SAM, and Kalman Filters for robust SLAM in dynamic scenes.</li>
-            <li>Reduced ATE by 30% and improved map density by 80% with real-time ROS Docker stack.</li>
-            <li><a href="https://github.com/virmani11kartik/mppi_f1tenth_team4" target="_blank">Code & Demos</a></li>
-          </ul>
-        </div>
-        <div class="project-card">
-          <h3>SVG-MPPI: Stein Variational MPPI</h3>
-          <ul>
-            <li>Implemented mode-seeking MPPI controller for F1/10th platform; reduced cross-track error, improved path fidelity.</li>
-            <li>Enabled real-time control in obstacle-rich environments using SVGD-based costmaps.</li>
-          </ul>
-        </div>
-      </div>
     </section>
-    
-    <section id="extracurricular" class="container">
-      <h2>Extracurricular</h2>
-      <ul>
-        <li>3D Scanning/Printing Technician, University of Pennsylvania (Aug 2024 – Present)</li>
-        <li>Vehicle Dynamics Engineer, SAE Team Uttejit-VIT (2019–2022): Designed, prototyped, and tested lightweight carbon fiber components for race car suspension/steering.</li>
-      </ul>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SVG-MPPI: Autonomous Racing Control</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/virmani11kartik/mppi_f1tenth_team4" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>Implemented Stein Variational Guided MPPI for real-time trajectory optimization on 1/10-scale autonomous racecar, achieving 38.7m max error reduction.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ROS2</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">MPPI</span>
+                        <span class="tech-tag">LiDAR</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Grounded SLAM with Dynamic Object Filtering</h3>
+                    </div>
+                    <p>Integrated GroundingDINO and SAM for real-time RGB-D SLAM with dynamic object filtering, reducing ATE by 29.5% and improving map density by 81%.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ORB-SLAM3</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>F1/10th Autonomous Racing</h3>
+                    </div>
+                    <p>Developed full-stack ROS2 autonomy pipeline with motion planning, SLAM, and perception. Integrated LiDAR, IMU, and camera sensors for real-time racing.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ROS2</span>
+                        <span class="tech-tag">SLAM</span>
+                        <span class="tech-tag">MPC</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Quadrotor Control & Vision Localization</h3>
+                    </div>
+                    <p>Developed vision-based localization system eliminating external motion-capture dependency. Implemented 3D path planning with A*, Dijkstra, and OMPL.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">OMPL</span>
+                        <span class="tech-tag">PID Control</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Neural Radiance Fields (NeRF)</h3>
+                    </div>
+                    <p>Implemented NeRF pipeline using PyTorch for novel view synthesis. Trained MLP with positional encoding and optimized volumetric ray marching.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">3D Rendering</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Physics-Informed Neural Network MPC</h3>
+                    </div>
+                    <p>Implemented MPC with neural networks for autonomous vehicles, reducing motion planning convergence time by 30% using GPU acceleration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">CUDA</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">MPC</span>
+                        <span class="tech-tag">CarSim</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:kvirmani@seas.upenn.edu">kvirmani@seas.upenn.edu</a></p>
-      <p>Philadelphia, PA</p>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">ROS2</span>
+                        <span class="skill-tag">JAX</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> Robotics & Control</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SLAM</span>
+                        <span class="skill-tag">MPC</span>
+                        <span class="skill-tag">PID Control</span>
+                        <span class="skill-tag">Path Planning</span>
+                        <span class="skill-tag">Sensor Fusion</span>
+                        <span class="skill-tag">State Estimation</span>
+                        <span class="skill-tag">Kinematics</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-eye"></i> Perception & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Object Detection</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Neural Networks</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cogs"></i> Tools & Simulation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Gazebo</span>
+                        <span class="skill-tag">RViz</span>
+                        <span class="skill-tag">MuJoCo</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">ANSYS</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
-  <footer>
-    <div class="container">
-      &copy; 2025 Kartik Virmani
-    </div>
-  </footer>
-  <script>
-    // Simple dark mode toggle
-    const btn = document.getElementById('toggle-dark');
-    btn.onclick = () => {
-      document.body.classList.toggle('dark');
-      btn.textContent = document.body.classList.contains('dark') ? "☀️" : "🌙";
-    };
-  </script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>kvirmani@seas.upenn.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(215) 452-8308</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Philadelphia, PA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Kartik Virmani. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/virmani11kartik" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to navigation links on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections and cards
+        document.querySelectorAll('section, .project-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
