@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kartik Virmani | Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Kartik Virmani</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#extracurricular">Extracurricular</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="toggle-dark" aria-label="Toggle Dark Mode">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <section id="about" class="container">
+      <div class="about-flex">
+        <div>
+          <h1>Hi, I'm Kartik!</h1>
+          <p>
+            Robotics & Mechatronics Engineer at University of Pennsylvania.<br>
+            Specializing in autonomous vehicles, motion planning, SLAM, and intelligent robot systems.<br>
+            Driven by curiosity and real-world impact.
+          </p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/virmani11kartik" target="_blank">GitHub</a>
+            <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank">ResearchGate</a>
+            <a href="meam_robo_master_resume_kartik.pdf" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div>
+          <h3>Programming</h3>
+          <p>C++, Python (JAX, TensorFlow, PyTorch), MATLAB, ROS2, Dynamic Programming, CI/CD</p>
+        </div>
+        <div>
+          <h3>Robotics & Systems</h3>
+          <p>Path Planning, MPC, PID, FSM, Behavior Trees, SLAM, State Estimation</p>
+        </div>
+        <div>
+          <h3>Design & Simulation</h3>
+          <p>SolidWorks, CATIA, ANSYS, ABAQUS, FEA, CarSim, Fusion 360</p>
+        </div>
+        <div>
+          <h3>Fabrication & Integration</h3>
+          <p>3D Printing, CNC, Laser Cutting, Wiring, PCB Prototyping, Embedded Systems</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="experience" class="container">
+      <h2>Professional Experience</h2>
+      <div class="exp-entry">
+        <h3>Modular Robotics Lab (MODLAB), University of Pennsylvania <span>Research Assistant | May 2025 – Present</span></h3>
+        <ul>
+          <li>Engineered passively stable humanoid robots; designed nonlinear controllers and real-time sensor fusion.</li>
+          <li>Prototyped parts, programmed IMU/encoder integration, and optimized balance on uneven terrain.</li>
+        </ul>
+      </div>
+      <div class="exp-entry">
+        <h3>X-Lab, University of Pennsylvania <span>Research Assistant | Feb 2025 – Present</span></h3>
+        <ul>
+          <li>Developed ROS2 motion planning/control pipelines (C++/Python) for F1-tenth robots; integrated MoveIt 2/OMPL.</li>
+          <li>Implemented 3D LiDAR for terrain estimation, advanced control for rough surfaces, and perception-to-action pipelines.</li>
+        </ul>
+      </div>
+      <div class="exp-entry">
+        <h3>Engineers India Limited <span>Mechanical Engineer | Jul 2022 – Jul 2024</span></h3>
+        <ul>
+          <li>Led actuator integration for $120M plant automation; improved system efficiency by 15% via predictive maintenance.</li>
+          <li>Developed test protocols, performed FEA, and managed DFM/GD&T for prototypes and production equipment.</li>
+        </ul>
+      </div>
+      <div class="exp-entry">
+        <h3>Centre of Excellence for Autonomous Vehicles Research, VIT <span>Research Assistant | Jul 2021 – Dec 2021</span></h3>
+        <ul>
+          <li>Developed L3 autonomous vehicle motor control, sensor fusion, and embedded routines in Python/C++.</li>
+          <li>Modeled, prototyped, and validated steering/braking subsystems using force/vision sensor fusion.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>F1/10th Autonomous Vehicle Racing</h3>
+          <ul>
+            <li>Developed full-stack ROS2 pipeline; implemented RRT, Pure Pursuit, and MPC for racing tasks.</li>
+            <li>State estimation using sensor fusion (LiDAR, IMU, GNSS) for real-time localization.</li>
+            <li><a href="https://github.com/virmani11kartik/mppi_f1tenth_team4" target="_blank">Project Code</a></li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>Quadrotor Control & Vision-Based Localization</h3>
+          <ul>
+            <li>Developed 3D path planning, trajectory optimization, and PID control for quadrotors.</li>
+            <li>Implemented onboard vision-based localization and custom physics-based simulator.</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>ORB-SLAM3 Dynamic Object Filtering</h3>
+          <ul>
+            <li>Integrated GroundingDINO, SAM, and Kalman Filters for robust SLAM in dynamic scenes.</li>
+            <li>Reduced ATE by 30% and improved map density by 80% with real-time ROS Docker stack.</li>
+            <li><a href="https://github.com/virmani11kartik/mppi_f1tenth_team4" target="_blank">Code & Demos</a></li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>SVG-MPPI: Stein Variational MPPI</h3>
+          <ul>
+            <li>Implemented mode-seeking MPPI controller for F1/10th platform; reduced cross-track error, improved path fidelity.</li>
+            <li>Enabled real-time control in obstacle-rich environments using SVGD-based costmaps.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section id="extracurricular" class="container">
+      <h2>Extracurricular</h2>
+      <ul>
+        <li>3D Scanning/Printing Technician, University of Pennsylvania (Aug 2024 – Present)</li>
+        <li>Vehicle Dynamics Engineer, SAE Team Uttejit-VIT (2019–2022): Designed, prototyped, and tested lightweight carbon fiber components for race car suspension/steering.</li>
+      </ul>
+    </section>
+    
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kvirmani@seas.upenn.edu">kvirmani@seas.upenn.edu</a></p>
+      <p>Philadelphia, PA</p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      &copy; 2025 Kartik Virmani
+    </div>
+  </footer>
+  <script>
+    // Simple dark mode toggle
+    const btn = document.getElementById('toggle-dark');
+    btn.onclick = () => {
+      document.body.classList.toggle('dark');
+      btn.textContent = document.body.classList.contains('dark') ? "☀️" : "🌙";
+    };
+  </script>
+</body>
+</html>
