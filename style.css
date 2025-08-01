@@ -13,10 +13,10 @@
 
 [data-theme="light"] {
   --bg: #ffffff;
-  --card-bg: #f4f4f4;
+  --card-bg: #cc5792;
   --nav-bg: #f8f8f8;
   --text: #121212;
-  --text-secondary: #555555;
+  --text-secondary: #f5ebf3;
   --accent: #4a00e0;
   --accent-hover: #6a00ff;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
