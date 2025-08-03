@@ -22,7 +22,7 @@
   --accent-hover: #6a00ff;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-  --hero-bg: linear-gradient(135deg, #f9c2eb 0%, #fbd6f3 100%);
+  --hero-bg: linear-gradient(135deg, #f1e7ef 0%, #f4ecf2 100%);
 }
 
 html {
