@@ -328,6 +328,93 @@ nav.navbar {
   letter-spacing: 1px;
 }
 
+/* ===== ADD THE NEW PROFILE STYLES HERE ===== */
+/* Hero Profile Section Styles */
+.hero-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    position: relative;
+    display: inline-block;
+    animation: profileFloat 3s ease-in-out infinite;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 
+        0 0 0 5px rgba(0, 255, 255, 0.2),
+        0 0 30px rgba(0, 255, 255, 0.4),
+        inset 0 0 20px rgba(0, 255, 255, 0.1);
+    object-fit: cover;
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.profile-ring {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--accent), var(--accent-secondary)) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: ringRotate 10s linear infinite;
+    opacity: 0.7;
+}
+
+.profile-image:hover .profile-img {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 0 5px rgba(0, 255, 255, 0.3),
+        0 0 40px rgba(0, 255, 255, 0.6),
+        inset 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+.profile-image:hover .profile-ring {
+    opacity: 1;
+    animation-duration: 3s;
+}
+
+.hero-text {
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Profile Animations */
+@keyframes profileFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes ringRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Cyberpunk Buttons */
 .btn {
   display: inline-block;
