@@ -44,433 +44,492 @@
   }
   </script>
 </head>
+
 <body>
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-indicator" aria-hidden="true">
-    <div class="scroll-progress" id="scroll-progress"></div>
-  </div>
-
-  <!-- Theme Toggle Button -->
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-    <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
-  </button>
-
-  <!-- Navigation -->
-  <nav class="navbar" aria-label="Primary">
-    <div class="nav-container">
-      <a class="nav-logo" href="#home" aria-label="Home">
-        <img src="/assets/grasp_logo1_blue.png" alt="Penn Engineering logo" />
-        <h2>Kartik Virmani</h2>
-      </a>
-      <div class="nav-menu" id="nav-menu" role="navigation">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="assets/Kartik_Virmani_Resume.pdf" class="nav-link" download>Resume</a>
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scroll-progress"></div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero" aria-label="Hero">
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/assets/grasp_logo1_blue.png" alt="Penn Engineering">
+                <h2>Kartik Virmani</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="assets/Kartik_Virmani_Resume.pdf" class="nav-link" download>Resume</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
     <div class="hero-container">
-      <div class="hero-content fade-in">
-        <div class="hero-profile">
-          <div class="profile-image">
-            <img src="assets/Profile1-modified.jpg" alt="Portrait of Kartik Virmani" class="profile-img" />
-            <div class="profile-ring" aria-hidden="true"></div>
-          </div>
-          <div class="hero-text">
-            <h1 class="hero-title">Kartik Virmani</h1>
-            <h2 class="hero-subtitle">Robotics Engineer &amp; Research Assistant</h2>
-          </div>
-        </div>
-        <p class="hero-description">
-          MS in Mechanical Engineering &amp; Applied Mechanics at the University of Pennsylvania,
-          specializing in Mechatronics, Robotics, and Autonomous Systems.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get In Touch</a>
-          <a href="#projects" class="btn btn-secondary">View Projects</a>
-        </div>
-        <div class="social-links" aria-label="Social links">
-          <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/virmani11kartik" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <i class="fab fa-researchgate" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about" aria-label="About">
-    <div class="container">
-      <h2 class="section-title fade-in">About Me</h2>
-      <div class="about-content">
-        <div class="about-text fade-in">
-          <p>
-            I'm a passionate Robotics Engineer currently pursuing my Master's at the University of Pennsylvania.
-            With a strong foundation in mechanical engineering and hands-on autonomous systems work,
-            I build full-stack robotics solutions—from embedded control and estimation to motion planning and perception.
-          </p>
-          <p>
-            My research focuses on mobile humanoid robots, autonomous racing, and advanced control systems.
-            I work daily with ROS 2 (C++/Python), Gazebo/RViz, and modern planning &amp; learning methods.
-          </p>
-        </div>
-        <div class="education fade-in">
-          <h3>Education</h3>
-          <div class="edu-item">
-            <h4>Master of Science in Mechanical Engineering &amp; Applied Mechanics</h4>
-            <p><strong>University of Pennsylvania</strong> • May 2026</p>
-            <p>Concentration: Mechatronics &amp; Robotics</p>
-          </div>
-          <div class="edu-item">
-            <h4>Bachelor of Technology in Mechanical Engineering</h4>
-            <p><strong>VIT — Vellore Institute of Technology</strong> • May 2022</p>
-            <p>GPA: 9.73/10.00</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="experience" aria-label="Experience">
-    <div class="container">
-      <h2 class="section-title fade-in">Professional Experience</h2>
-      <div class="timeline">
-
-        <!-- MODLAB -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Research Assistant — Modular Robotics Lab (MODLAB)</h3>
-            <h4>University of Pennsylvania</h4>
-            <span class="timeline-date">May 2025 – Present</span>
-            <ul>
-              <li>Designed an off-road holonomic robot (HAMR) with rocker suspension; modeled in SolidWorks → URDF/SDF for Gazebo/RViz.</li>
-              <li>Implemented EKF sensor fusion (encoders + IMU + optical flow) validated against Vicon; tuned noise params for drift reduction.</li>
-              <li>Published fused odometry to a Raspberry Pi (ROS 2 Jazzy); built Jacobian-based velocity controller for holonomic YPR motion.</li>
-              <li>Developed PRM + A* on occupancy grids with off-road cost extensions; integrated RealSense D455 for local mapping &amp; avoidance.</li>
-              <li>Engineered 3-DOF gimbal with IMU gravity alignment &amp; slip-ring CAN-bus passthrough; authored first-author ICRA submission.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- X-Lab -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Research Assistant — X-Lab</h3>
-            <h4>University of Pennsylvania</h4>
-            <span class="timeline-date">Feb 2025 – Present</span>
-            <ul>
-              <li>Built ROS 2 motion-control pipelines (C++/Python) for F1Tenth; integrated MoveIt 2/OMPL for 3D trajectory generation.</li>
-              <li>Estimated Z-axis with 3D LiDAR for rough-terrain control; tested reverse-thrust stabilization and vision-conditioned planning.</li>
-              <li>Used FSMs &amp; behavior trees to structure autonomy; deployed/debugged stacks in RViz &amp; Gazebo for real-time demos.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Engineers India -->
-        <div class="timeline-item fade-in">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Mechanical Engineer</h3>
-            <h4>Engineers India Limited</h4>
-            <span class="timeline-date">Jul 2022 – Jul 2024</span>
-            <ul>
-              <li>Led mechatronic integration (PLC, PID, sensors) for a $120M automation program; maintained ~99% uptime.</li>
-              <li>Introduced predictive maintenance reducing downtime by ~15%; tuned compressor/motor feedback to cut ~30% response time.</li>
-              <li>Ran GD&amp;T, DFM/DFA, and ANSYS FEA reviews; cut assembly defects by ~20% and reduced lead time by ~15%.</li>
-              <li>Developed actuator test rigs and protocols; authored documentation, BOMs, and commissioning packages.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects" aria-label="Projects">
-    <div class="container">
-      <h2 class="section-title fade-in">Projects</h2>
-      <div class="projects-grid">
-
-        <!-- HAMR -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/HAMR_Humanoid','_blank')">
-          <div class="project-header"><h3>HAMR Holonomic Robot</h3></div>
-          <p>Full-stack ROS 2 autonomy integrating localization, navigation, and motion planning (PRM/A*, Pure Pursuit, MPC) with RealSense-based mapping.</p>
-          <div class="project-tech">
-            <span class="tech-tag">ROS 2</span><span class="tech-tag">C++</span><span class="tech-tag">SLAM</span><span class="tech-tag">MPC</span>
-          </div>
-        </div>
-
-        <!-- Quadrotor Control & Vision-Based Localization -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/meam620-virmani11kartik','_blank')">
-          <div class="project-header"><h3>Quadrotor Control &amp; Vision Localization</h3></div>
-          <p>3D planning (A*/OMPL), VIO/SLAM-based localization, and PID/MPC control in a physics-accurate simulator with hardware-in-the-loop tests.</p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span><span class="tech-tag">PID/MPC</span><span class="tech-tag">OMPL</span><span class="tech-tag">Computer Vision</span>
-          </div>
-        </div>
-
-        <!-- Grounded SLAM -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/Visual-SLAM-DOF-w-GDino','_blank')">
-          <div class="project-header"><h3>Grounded SLAM (Dynamic Filtering)</h3></div>
-          <p>GroundingDINO + SAM + Kalman smoothing for ORB-SLAM3; reduced ATE and boosted map density significantly on dynamic scenes.</p>
-          <div class="project-tech">
-            <span class="tech-tag">ORB-SLAM3</span><span class="tech-tag">OpenCV</span><span class="tech-tag">Docker</span><span class="tech-tag">Python</span>
-          </div>
-        </div>
-
-        <!-- SVG-MPPI -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/mppi_f1tenth_team4','_blank')">
-          <div class="project-header"><h3>SVG-MPPI: Autonomous Racing Control</h3></div>
-          <p>SVGD-guided MPPI on F1/10 at 50 Hz; reduced max track error and cross-track error with stable high-frequency control.</p>
-          <div class="project-tech">
-            <span class="tech-tag">MPPI</span><span class="tech-tag">SVGD</span><span class="tech-tag">ROS 2</span><span class="tech-tag">C++</span>
-          </div>
-        </div>
-
-        <!-- RL & MuJoCo -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/learning-in-robotics-6500/tree/main/Biped%20RL','_blank')">
-          <div class="project-header"><h3>Traj Opt &amp; RL (MuJoCo + PPO)</h3></div>
-          <p>Random-shooting MPC and PPO (Walker/Humanoid) with stable convergence and strong returns on DeepMind Control tasks.</p>
-          <div class="project-tech">
-            <span class="tech-tag">MuJoCo</span><span class="tech-tag">MPC</span><span class="tech-tag">PPO</span>
-          </div>
-        </div>
-
-        <!-- UKF State Estimation -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/learning-in-robotics-6500','_blank')">
-          <div class="project-header"><h3>UKF Vehicle State Estimation</h3></div>
-          <p>Fused IMU, GPS, LiDAR, and encoders via UKF; demonstrated reduced localization drift over kilometer-scale routes.</p>
-          <div class="project-tech">
-            <span class="tech-tag">UKF</span><span class="tech-tag">Sensor Fusion</span>
-          </div>
-        </div>
-
-        <!-- NeRF -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/learning-in-robotics-6500/blob/main/Policy%20Iteration%2C%20SLAM%20and%20NeRF/NerF','_blank')">
-          <div class="project-header"><h3>Neural Radiance Fields (NeRF)</h3></div>
-          <p>PyTorch NeRF with positional encoding and hierarchical sampling; evaluated with PSNR/SSIM on novel-view synthesis.</p>
-          <div class="project-tech">
-            <span class="tech-tag">PyTorch</span><span class="tech-tag">Deep Learning</span><span class="tech-tag">3D Rendering</span>
-          </div>
-        </div>
-
-        <!-- Physics-Informed MPC -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/Vechicle_MPC','_blank')">
-          <div class="project-header"><h3>Physics-Informed NN MPC</h3></div>
-          <p>CarSim + MATLAB + CUDA to hybridize NN dynamics with MPC; cut planning convergence time substantially.</p>
-          <div class="project-tech">
-            <span class="tech-tag">MPC</span><span class="tech-tag">CUDA</span><span class="tech-tag">Python</span>
-          </div>
-        </div>
-
-        <!-- Quadruped MPC -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/Model-Predictive-Control-for-Quadrapeds','_blank')">
-          <div class="project-header"><h3>MPC for Quadruped Manipulators</h3></div>
-          <p>Zero-Momentum Control + MPC in PyDrake/MuJoCo; improved planning robustness across disturbance tests.</p>
-          <div class="project-tech">
-            <span class="tech-tag">MPC</span><span class="tech-tag">ZMC</span><span class="tech-tag">MuJoCo</span>
-          </div>
-        </div>
-
-        <!-- Penn-GRASP Robot -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://github.com/virmani11kartik/Autonmous--Navigation---Mechatronics-project','_blank')">
-          <div class="project-header"><h3>Penn-GRASP MEAM5100 Robot</h3></div>
-          <p>ESP32 modular platform with ToF, H-Bridge, encoder PID loops, and Wi-Fi multi-MCU comms for indoor autonomy.</p>
-          <div class="project-tech">
-            <span class="tech-tag">ESP32</span><span class="tech-tag">PID</span><span class="tech-tag">WiFi</span>
-          </div>
-        </div>
-
-        <!-- CFD LMGTP -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://www.sae.org/publications/technical-papers/content/2022-01-5065/','_blank')">
-          <div class="project-header"><h3>CFD of LMGTP Concept Car</h3></div>
-          <p>Transient RANS in STAR-CCM+ to optimize undertray &amp; diffuser aerodynamics across pitch angles.</p>
-          <div class="project-tech">
-            <span class="tech-tag">STAR-CCM+</span><span class="tech-tag">CFD</span>
-          </div>
-        </div>
-
-        <!-- Four-Wheel Steering -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://www.researchgate.net/publication/353332658_Four_Wheel_Steering_Multibody_Simulation_and_Structural_Analysis?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoicHJvZmlsZSJ9fQ','_blank')">
-          <div class="project-header"><h3>Four-Wheel Steering Mechanism</h3></div>
-          <p>SolidWorks + ANSYS structural validation under ≤700 N steering loads with GD&amp;T-driven tolerances.</p>
-          <div class="project-tech">
-            <span class="tech-tag">SolidWorks</span><span class="tech-tag">ANSYS</span>
-          </div>
-        </div>
-
-        <!-- Clutch Plate Optimization -->
-        <div class="project-card clickable-card fade-in"
-             onclick="window.open('https://www.sciencedirect.com/science/article/pii/S2214785321019295?via%3Dihub','_blank')">
-          <div class="project-header"><h3>Clutch Plate Friction Optimization</h3></div>
-          <p>Thermo-mechanical FEA for heat/wear modeling; geometry + materials tuned for fatigue resistance.</p>
-          <div class="project-tech">
-            <span class="tech-tag">ANSYS</span><span class="tech-tag">FEA</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills" aria-label="Skills">
-    <div class="container">
-      <h2 class="section-title fade-in">Technical Skills</h2>
-      <div class="skills-grid">
-        <!-- Programming -->
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-code" aria-hidden="true"></i> Programming</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">ROS 2</span>
-            <span class="skill-tag">JAX</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">PyTorch</span>
-          </div>
-        </div>
-        <!-- Robotics & Control -->
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-robot" aria-hidden="true"></i> Robotics &amp; Control</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">SLAM</span>
-            <span class="skill-tag">MPC</span>
-            <span class="skill-tag">PID Control</span>
-            <span class="skill-tag">Path Planning</span>
-            <span class="skill-tag">Sensor Fusion</span>
-            <span class="skill-tag">Kinematics</span>
-          </div>
-        </div>
-        <!-- Perception & AI -->
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-eye" aria-hidden="true"></i> Perception &amp; AI</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Computer Vision</span>
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">Deep Learning</span>
-            <span class="skill-tag">Reinforcement Learning</span>
-          </div>
-        </div>
-        <!-- Tools & Simulation -->
-        <div class="skill-category fade-in">
-          <h3><i class="fas fa-cogs" aria-hidden="true"></i> Tools &amp; Simulation</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Gazebo</span>
-            <span class="skill-tag">RViz</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">SolidWorks</span>
-            <span class="skill-tag">ANSYS</span>
-            <span class="skill-tag">MuJoCo</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact" aria-label="Contact">
-    <div class="container">
-      <h2 class="section-title fade-in">Get In Touch</h2>
-      <div class="contact-content">
-        <div class="contact-info fade-in">
-          <div class="contact-item">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <div>
-              <h3>Email</h3>
-              <p><a href="mailto:kvirmani@seas.upenn.edu">kvirmani@seas.upenn.edu</a></p>
+        <div class="hero-content fade-in">
+            <div class="hero-profile">
+                <div class="profile-image">
+                    <img src="assets/Profile1-modified.png" alt="Kartik Virmani" class="profile-img">
+                    <div class="profile-ring"></div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Kartik Virmani</h1>
+                    <h2 class="hero-subtitle">Robotics Engineer & Research Assistant</h2>
+                </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-phone" aria-hidden="true"></i>
-            <div>
-              <h3>Phone</h3>
-              <p><a href="tel:+12154528308">(215) 452-8308</a></p>
+            <p class="hero-description">
+                MS in Mechanical Engineering & Applied Mechanics at University of Pennsylvania,
+                specializing in Mechatronics, Robotics, and Autonomous Systems
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
             </div>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-            <div>
-              <h3>Location</h3>
-              <p>Philadelphia, PA</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/virmani11kartik" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank" aria-label="ResearchGate">
+                    <i class="fab fa-researchgate"></i>
+                </a>
             </div>
-          </div>
         </div>
-        <div class="contact-form fade-in">
-          <form name="contact-form" method="post" aria-label="Contact form">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
-            </div>
-            <div class="form-group">
-              <input type="text" name="subject" placeholder="Subject" required aria-label="Subject" />
-            </div>
-            <div class="form-group">
-              <textarea name="message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer" aria-label="Footer">
-    <div class="container">
-      <div class="footer-content fade-in">
-        <p>&copy; 2025 Kartik Virmani. All rights reserved.</p>
-        <div class="footer-links" aria-label="Footer social links">
-          <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/virmani11kartik" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <i class="fab fa-researchgate" aria-hidden="true"></i>
-          </a>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>
+                        I'm a passionate Robotics Engineer currently pursuing my Master's degree at the University of Pennsylvania.
+                        With a strong foundation in mechanical engineering and extensive experience in autonomous systems,
+                        I specialize in developing cutting-edge robotics solutions.
+                    </p>
+                    <p>
+                        My research focuses on mobile humanoid robots, autonomous vehicle racing, and advanced control systems.
+                        I have hands-on experience with ROS2, motion planning algorithms, and real-time embedded systems.
+                    </p>
+                </div>
+                <div class="education fade-in">
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <h4>Master of Science in Mechanical Engineering & Applied Mechanics</h4>
+                        <p><strong>University of Pennsylvania</strong> • May 2026</p>
+                        <p>Concentration: Mechatronics & Robotics</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Bachelor of Technology in Mechanical Engineering</h4>
+                        <p><strong>VIT-Vellore Institute of Technology</strong> • May 2022</p>
+                        <p>GPA: 9.73/10.00</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Experience</h2>
+            <div class="timeline">
+                <!-- MODLAB -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant - Modular Robotics Lab (MODLAB)</h3>
+                        <h4>University of Pennsylvania</h4>
+                        <span class="timeline-date">May 2025 - Present</span>
+                        <ul>
+                            <li>Engineered passively stable mobile humanoid robots by lowering center of mass</li>
+                            <li>Developed ROS Gazebo simulation for nonlinear pendulum dynamics</li>
+                            <li>Implemented energy-shaping & feedback linearization controllers</li>
+                            <li>Prototyped mechanical parts and integrated IMU/encoder feedback loops</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- X-Lab -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Research Assistant - X-Lab</h3>
+                        <h4>University of Pennsylvania</h4>
+                        <span class="timeline-date">Feb 2025 - Present</span>
+                        <ul>
+                            <li>Developed ROS 2 pipelines in C++/Python for F1Tenth motion control</li>
+                            <li>Implemented 3D trajectory generation using MoveIt 2 & OMPL</li>
+                            <li>Applied FSM, behavior trees, and AI for autonomous decisions</li>
+                            <li>Enhanced manipulator control in ROS2-Rviz simulations</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Engineers India -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Mechanical Engineer</h3>
+                        <h4>Engineers India Limited</h4>
+                        <span class="timeline-date">Jul 2022 - Jul 2024</span>
+                        <ul>
+                            <li>Led mechatronic system integration for $120M plant automation (PLC, PID, sensors)</li>
+                            <li>Reduced downtime by 15% via predictive maintenance strategies</li>
+                            <li>Performed GD&T, FEA, and DFM reviews to optimize manufacturability</li>
+                            <li>Authored technical documentation and test protocols for actuators</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Projects</h2>
+            <div class="projects-grid">
+                <!-- HAMR -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https:https:https://github.com/virmani11kartik/HAMR_Humanoid','_blank')">
+                    <div class="project-header">
+                        <h3>HAMR Holonomic Robot</h3>
+                    </div>
+                    <p>Built a full-stack ROS 2 autonomy pipeline integrating,Localization navigation, motion planning (RRT, Pure Pursuit, MPC).</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ROS 2</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">SLAM</span>
+                        <span class="tech-tag">MPC</span>
+                    </div>
+                </div>
+                
+                <!-- Quadrotor Control & Vision-Based Localization -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/meam620-virmani11kartik','_blank')">
+                    <div class="project-header">
+                        <h3>Quadrotor Control & Vision Localization</h3>
+                    </div>
+                    <p>Implemented 3D path planning, vision-based localization, and PID/MPC controllers in a custom simulator and hardware-in-the-loop tests.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PID/MPC</span>
+                        <span class="tech-tag">OMPL</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                </div>
+                
+                <!-- Grounded SLAM -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/Visual-SLAM-DOF-w-GDino','_blank')">
+                    <div class="project-header">
+                        <h3>Grounded SLAM (Dynamic Filtering)</h3>
+                    </div>
+                    <p>Integrated GroundingDINO, SAM, and Kalman Filters in ORB-SLAM3 for dynamic object masking, reducing ATE by 29.5% and boosting map density by 81%.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ORB-SLAM3</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+                
+                <!-- SVG-MPPI -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/mppi_f1tenth_team4','_blank')">
+                    <div class="project-header">
+                        <h3>SVG-MPPI: Autonomous Racing Control</h3>
+                    </div>
+                    <p>Implemented Stein Variational Guided MPPI on F1/10 platform, reducing track error by 38.7 m and cross-track error to 0.855 m at 50 Hz.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MPPI</span>
+                        <span class="tech-tag">SVGD</span>
+                        <span class="tech-tag">ROS 2</span>
+                        <span class="tech-tag">C++</span>
+                    </div>
+                </div>
+                
+                <!-- RL & MuJoCo -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/learning-in-robotics-6500/tree/main/Biped%20RL','_blank')">
+                    <div class="project-header">
+                        <h3>Traj Opt & RL (MuJoCo + PPO)</h3>
+                    </div>
+                    <p>Built random-shooting MPC and PPO agents for Cartpole, Walker, and Humanoid in MuJoCo, achieving 700+ avg returns and smooth convergence.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MuJoCo</span>
+                        <span class="tech-tag">MPC</span>
+                        <span class="tech-tag">PPO</span>
+                    </div>
+                </div>
+                
+                <!-- UKF State Estimation -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/learning-in-robotics-6500','_blank')">
+                    <div class="project-header">
+                        <h3>UKF Vehicle State Estimation</h3>
+                    </div>
+                    <p>Fused IMU, GPS, LiDAR, and encoder data via Unscented Kalman Filter to reduce localization drift by 30% over 1 km.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">UKF</span>
+                        <span class="tech-tag">Sensor Fusion</span>
+                    </div>
+                </div>
+                
+                <!-- NeRF -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https:https://github.com/virmani11kartik/learning-in-robotics-6500/blob/main/Policy%20Iteration%2C%20SLAM%20and%20NeRF/NerF','_blank')">
+                    <div class="project-header">
+                        <h3>Neural Radiance Fields (NeRF)</h3>
+                    </div>
+                    <p>Implemented NeRF in PyTorch for novel-view synthesis with positional encoding, hierarchical sampling, and PSNR/SSIM metrics.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">3D Rendering</span>
+                    </div>
+                </div>
+                
+                <!-- Physics-Informed MPC -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/Vechicle_MPC','_blank')">
+                    <div class="project-header">
+                        <h3>Physics-Informed NN MPC</h3>
+                    </div>
+                    <p>Combined neural networks with MPC in CarSim+MATLAB, cutting planning convergence by 30% with CUDA acceleration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MPC</span>
+                        <span class="tech-tag">CUDA</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                </div>
+                
+                <!-- Quadruped MPC -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/Model-Predictive-Control-for-Quadrapeds','_blank')">
+                    <div class="project-header">
+                        <h3>MPC for Quadruped Manipulators</h3>
+                    </div>
+                    <p>Designed MPC with Zero Momentum Control for quadruped locomotion in PyDrake/MuJoCo, boosting planning robustness by 8%.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">MPC</span>
+                        <span class="tech-tag">ZMC</span>
+                        <span class="tech-tag">MuJoCo</span>
+                    </div>
+                </div>
+                
+                <!-- Penn-GRASP Robot -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://github.com/virmani11kartik/Autonmous--Navigation---Mechatronics-project','_blank')">
+                    <div class="project-header">
+                        <h3>Penn-GRASP MEAM5100 Robot</h3>
+                    </div>
+                    <p>Built ESP32 modular mobile robot with TOF sensors, H-Bridge drivers, PID encoder loops, and WiFi-based multi-ESP communication.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">PID</span>
+                        <span class="tech-tag">WiFi</span>
+                    </div>
+                </div>
+                
+                <!-- Vehicle Roll Control -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
+                    <div class="project-header">
+                        <h3>Vehicle Excess Roll Control</h3>
+                    </div>
+                    <p>Implemented PID-based roll correction that detects >5° roll at ≥31 mph and adjusts steering, reducing rollover risk by 30%.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PID</span>
+                        <span class="tech-tag">Vehicle Dynamics</span>
+                    </div>
+                </div>
+                
+                <!-- XFEM Crack Modeling -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('#','_blank')">
+                    <div class="project-header">
+                        <h3>XFEM Crack Modeling</h3>
+                    </div>
+                    <p>Simulated thermal barrier coating cracks under cyclic heat loads in ABAQUS XFEM, optimizing geometry for durability.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ABAQUS</span>
+                        <span class="tech-tag">XFEM</span>
+                    </div>
+                </div>
+                
+                <!-- CFD LMGTP -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://www.sae.org/publications/technical-papers/content/2022-01-5065/','_blank')">
+                    <div class="project-header">
+                        <h3>CFD of LMGTP Concept Car</h3>
+                    </div>
+                    <p>Ran transient RANS simulations in STAR-CCM+ to optimize undertray & diffuser aerodynamics across pitch angles.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">STAR-CCM+</span>
+                        <span class="tech-tag">CFD</span>
+                    </div>
+                </div>
+                
+                <!-- Four-Wheel Steering -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://www.researchgate.net/publication/353332658_Four_Wheel_Steering_Multibody_Simulation_and_Structural_Analysis?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoicHJvZmlsZSJ9fQ','_blank')">
+                    <div class="project-header">
+                        <h3>Four-Wheel Steering Mechanism</h3>
+                    </div>
+                    <p>Designed rear-wheel steerable suspension in SolidWorks & ANSYS, validating safety under ≤700 N with GD&T-defined tolerances.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">SolidWorks</span>
+                        <span class="tech-tag">ANSYS</span>
+                    </div>
+                </div>
+                
+                <!-- Clutch Plate Optimization -->
+                <div class="project-card clickable-card fade-in" onclick="window.open('https://www.sciencedirect.com/science/article/pii/S2214785321019295?via%3Dihub','_blank')">
+                    <div class="project-header">
+                        <h3>Clutch Plate Friction Optimization</h3>
+                    </div>
+                    <p>Modeled heat generation & wear in ANSYS, optimizing contact geometry and material choice to reduce fatigue.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ANSYS</span>
+                        <span class="tech-tag">FEA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <!-- Programming -->
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">ROS2</span>
+                        <span class="skill-tag">JAX</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                    </div>
+                </div>
+                <!-- Robotics & Control -->
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-robot"></i> Robotics & Control</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SLAM</span>
+                        <span class="skill-tag">MPC</span>
+                        <span class="skill-tag">PID Control</span>
+                        <span class="skill-tag">Path Planning</span>
+                        <span class="skill-tag">Sensor Fusion</span>
+                        <span class="skill-tag">Kinematics</span>
+                    </div>
+                </div>
+                <!-- Perception & AI -->
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-eye"></i> Perception & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                    </div>
+                </div>
+                <!-- Tools & Simulation -->
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-cogs"></i> Tools & Simulation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Gazebo</span>
+                        <span class="skill-tag">RViz</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">ANSYS</span>
+                        <span class="skill-tag">MuJoCo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>kvirmani@seas.upenn.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>(215) 452-8308</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Philadelphia, PA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form fade-in">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content fade-in">
+                <p>&copy; 2025 Kartik Virmani. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/kartik-virmani-1a5282170" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/virmani11kartik" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Kartik_Virmani" target="_blank" aria-label="ResearchGate">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
