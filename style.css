@@ -165,7 +165,7 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 10001;
   transition: var(--transition);
   box-shadow: var(--shadow-md);
 }
@@ -185,6 +185,7 @@ img {
   font-size: 1.125rem;
   color: var(--text-secondary);
   transition: var(--transition);
+  pointer-events: none;
 }
 
 /* ===========================
@@ -1460,7 +1461,7 @@ section {
 }
 
 .footer-logo img {
-  height: 36px;
+  height: 48px;
 }
 
 .footer-logo span {

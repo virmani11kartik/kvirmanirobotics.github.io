@@ -1,9 +1,17 @@
-// Professional Portfolio - Enhanced JavaScript
+// ===========================
+// IMMEDIATE THEME INITIALIZATION (before DOM loads)
+// ===========================
+(function() {
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+})();
 
 // ===========================
 // WAIT FOR DOM TO LOAD
 // ===========================
 document.addEventListener('DOMContentLoaded', function() {
+
+console.log("DOM loaded - initializing portfolio...");
 
 // ===========================
 // THEME TOGGLE
@@ -11,21 +19,34 @@ document.addEventListener('DOMContentLoaded', function() {
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
-if (themeToggle && themeIcon) {
-  // Load saved theme or default to dark
-  const savedTheme = localStorage.getItem("theme") || "dark";
-  document.documentElement.setAttribute("data-theme", savedTheme);
-  themeIcon.className = savedTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
+console.log("Theme toggle element:", themeToggle);
+console.log("Theme icon element:", themeIcon);
 
-  // Toggle handler with smooth transition
-  themeToggle.addEventListener("click", () => {
+if (themeToggle && themeIcon) {
+  // Set initial icon based on current theme
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  themeIcon.className = currentTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
+  
+  console.log("Theme toggle initialized. Current theme:", currentTheme);
+
+  // Toggle handler
+  themeToggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
     const current = document.documentElement.getAttribute("data-theme");
     const newTheme = current === "dark" ? "light" : "dark";
+    
+    console.log("Toggling theme from", current, "to", newTheme);
     
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
     themeIcon.className = newTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
   });
+  
+  console.log("Theme toggle click handler attached");
+} else {
+  console.error("Theme toggle or icon element not found!");
 }
 
 // ===========================
@@ -34,6 +55,7 @@ if (themeToggle && themeIcon) {
 const scrollProgress = document.getElementById("scroll-progress");
 
 function updateScrollProgress() {
+  if (!scrollProgress) return;
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const scrollPercent = (scrollTop / docHeight) * 100;
@@ -50,33 +72,37 @@ const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 // Toggle mobile menu
-hamburger?.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-  
-  // Animate hamburger bars
-  const bars = hamburger.querySelectorAll(".bar");
-  bars.forEach((bar, index) => {
-    if (navMenu.classList.contains("active")) {
-      if (index === 0) bar.style.transform = "rotate(45deg) translate(5px, 5px)";
-      if (index === 1) bar.style.opacity = "0";
-      if (index === 2) bar.style.transform = "rotate(-45deg) translate(7px, -6px)";
-    } else {
-      bar.style.transform = "none";
-      bar.style.opacity = "1";
-    }
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    
+    // Animate hamburger bars
+    const bars = hamburger.querySelectorAll(".bar");
+    bars.forEach((bar, index) => {
+      if (navMenu.classList.contains("active")) {
+        if (index === 0) bar.style.transform = "rotate(45deg) translate(5px, 5px)";
+        if (index === 1) bar.style.opacity = "0";
+        if (index === 2) bar.style.transform = "rotate(-45deg) translate(7px, -6px)";
+      } else {
+        bar.style.transform = "none";
+        bar.style.opacity = "1";
+      }
+    });
   });
-});
+}
 
 // Close mobile menu when clicking on a link
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
-    if (navMenu.classList.contains("active")) {
+    if (navMenu && navMenu.classList.contains("active")) {
       navMenu.classList.remove("active");
-      const bars = hamburger.querySelectorAll(".bar");
-      bars.forEach(bar => {
-        bar.style.transform = "none";
-        bar.style.opacity = "1";
-      });
+      if (hamburger) {
+        const bars = hamburger.querySelectorAll(".bar");
+        bars.forEach(bar => {
+          bar.style.transform = "none";
+          bar.style.opacity = "1";
+        });
+      }
     }
   });
 });
@@ -219,116 +245,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===========================
 const contactForm = document.getElementById("contact-form");
 
-contactForm?.addEventListener("submit", (e) => {
-  e.preventDefault();
-  
-  const formData = new FormData(contactForm);
-  const data = Object.fromEntries(formData);
-  
-  // Here you would typically send the form data to a server
-  // For now, we'll just show a success message
-  console.log("Form submitted:", data);
-  
-  // Show success message
-  const submitBtn = contactForm.querySelector('button[type="submit"]');
-  const originalText = submitBtn.innerHTML;
-  submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-  submitBtn.style.background = "var(--success)";
-  submitBtn.disabled = true;
-  
-  // Reset form
-  setTimeout(() => {
-    contactForm.reset();
-    submitBtn.innerHTML = originalText;
-    submitBtn.style.background = "";
-    submitBtn.disabled = false;
-  }, 3000);
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    console.log("Form submitted:", data);
+    
+    // Show success message
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+    submitBtn.style.background = "var(--success)";
+    submitBtn.disabled = true;
+    
+    // Reset form
+    setTimeout(() => {
+      contactForm.reset();
+      submitBtn.innerHTML = originalText;
+      submitBtn.style.background = "";
+      submitBtn.disabled = false;
+    }, 3000);
+  });
+}
 
 // ===========================
 // NAVBAR BACKGROUND ON SCROLL
 // ===========================
 const navbar = document.querySelector(".navbar");
-let lastScroll = 0;
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-  
-  // Add/remove shadow based on scroll position
-  if (currentScroll > 50) {
-    navbar.style.boxShadow = "var(--shadow-lg)";
-  } else {
-    navbar.style.boxShadow = "var(--shadow-sm)";
-  }
-  
-  lastScroll = currentScroll;
-});
-
-// ===========================
-// TYPING EFFECT (Optional Enhancement)
-// ===========================
-function typeWriter(element, text, speed = 50) {
-  let i = 0;
-  element.textContent = "";
-  
-  function type() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll > 50) {
+      navbar.style.boxShadow = "var(--shadow-lg)";
+    } else {
+      navbar.style.boxShadow = "var(--shadow-sm)";
     }
-  }
-  
-  type();
+  });
 }
-
-// Apply typing effect to hero title on load (optional)
-window.addEventListener("load", () => {
-  const heroTitle = document.querySelector(".hero-title");
-  if (heroTitle) {
-    const originalText = heroTitle.textContent;
-    // Uncomment to enable typing effect
-    // typeWriter(heroTitle, originalText, 50);
-  }
-});
-
-// ===========================
-// PARALLAX EFFECT FOR HERO
-// ===========================
-window.addEventListener("scroll", () => {
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    const scrolled = window.scrollY;
-    const heroContent = hero.querySelector(".hero-content");
-    if (heroContent) {
-      heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-      heroContent.style.opacity = `${1 - scrolled / 600}`;
-    }
-  }
-});
-
-// ===========================
-// PRELOADER (Optional)
-// ===========================
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-  
-  // Hide scroll indicator after 3 seconds
-  setTimeout(() => {
-    const scrollDown = document.querySelector(".scroll-down");
-    if (scrollDown) {
-      scrollDown.style.opacity = "0";
-      setTimeout(() => {
-        scrollDown.style.display = "none";
-      }, 300);
-    }
-  }, 3000);
-});
 
 // ===========================
 // PERFORMANCE OPTIMIZATION
 // ===========================
-// Debounce function for scroll events
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -341,25 +303,19 @@ function debounce(func, wait) {
   };
 }
 
-// Apply debouncing to scroll events
-window.addEventListener("scroll", debounce(() => {
-  updateScrollProgress();
-  highlightActiveSection();
-}, 10));
-
 // ===========================
 // ACCESSIBILITY ENHANCEMENTS
 // ===========================
-// Add keyboard navigation support
 document.addEventListener("keydown", (e) => {
-  // Close mobile menu on Escape
-  if (e.key === "Escape" && navMenu.classList.contains("active")) {
+  if (e.key === "Escape" && navMenu && navMenu.classList.contains("active")) {
     navMenu.classList.remove("active");
-    const bars = hamburger.querySelectorAll(".bar");
-    bars.forEach(bar => {
-      bar.style.transform = "none";
-      bar.style.opacity = "1";
-    });
+    if (hamburger) {
+      const bars = hamburger.querySelectorAll(".bar");
+      bars.forEach(bar => {
+        bar.style.transform = "none";
+        bar.style.opacity = "1";
+      });
+    }
   }
 });
 
@@ -375,5 +331,7 @@ console.log(
   "color: #8b5cf6; font-size: 14px;"
 );
 console.log("https://github.com/virmani11kartik");
+
+console.log("Portfolio initialized successfully!");
 
 }); // End of DOMContentLoaded
