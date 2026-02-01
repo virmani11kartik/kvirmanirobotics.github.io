@@ -222,7 +222,7 @@ img {
 }
 
 .nav-logo img {
-  height: 42px;
+  height: 84px;
   width: auto;
   transition: var(--transition);
 }
