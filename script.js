@@ -14,15 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log("DOM loaded - initializing portfolio...");
 
 // ===========================
-// THEME TOGGLE
+// THEME TOGGLE - FIXED VERSION
 // ===========================
-const themeToggle = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
+function initThemeToggle() {
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeIcon = document.getElementById("theme-icon");
 
-console.log("Theme toggle element:", themeToggle);
-console.log("Theme icon element:", themeIcon);
+  console.log("Theme toggle element:", themeToggle);
+  console.log("Theme icon element:", themeIcon);
 
-if (themeToggle && themeIcon) {
+  if (!themeToggle || !themeIcon) {
+    console.error("Theme toggle or icon element not found!");
+    return;
+  }
+
   // Set initial icon based on current theme
   const currentTheme = document.documentElement.getAttribute("data-theme");
   themeIcon.className = currentTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
@@ -39,15 +44,22 @@ if (themeToggle && themeIcon) {
     
     console.log("Toggling theme from", current, "to", newTheme);
     
+    // Update theme
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
+    
+    // Update icon
     themeIcon.className = newTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
+    
+    console.log("Theme changed to:", newTheme);
   });
   
   console.log("Theme toggle click handler attached");
-} else {
-  console.error("Theme toggle or icon element not found!");
 }
+
+// Initialize theme toggle
+initThemeToggle();
+
 
 // ===========================
 // SCROLL PROGRESS INDICATOR
