@@ -622,3 +622,20 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
+
+// ===========================
+// CONSOLE MESSAGE
+// ===========================
+console.log(
+  "%cKartik Virmani - Portfolio",
+  "color: #3b82f6; font-size: 24px; font-weight: bold;"
+);
+console.log(
+  "%cInterested in the code? Check out my GitHub!",
+  "color: #8b5cf6; font-size: 14px;"
+);
+console.log("https://github.com/virmani11kartik");
+
+console.log("Portfolio initialized successfully!");
+
+}); // End of DOMContentLoaded
