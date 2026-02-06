@@ -738,12 +738,14 @@
             <div class="design-grid">
                 <!-- Design 1: HAMR Chassis -->
                 <div class="design-card">
-                    <div class="design-image">
-                        <img src="assets/designs/hamr-chassis.png" alt="HAMR Robot Chassis Assembly">
-                        <div class="design-overlay">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </div>
+                  <div class="design-image"
+                      data-gallery="hamr"
+                      data-images='["assets/designs/hamr-chassis.png", "assets/designs/hamr-view2.png", "assets/designs/hamr-view3.png", "assets/designs/hamr-iso.png"]'>
+                      <img src="assets/designs/hamr-chassis.png" alt="HAMR Robot Chassis Assembly">
+                      <div class="design-overlay">
+                          <i class="fas fa-search-plus"></i>
+                      </div>
+                  </div>
                     <div class="design-content">
                         <h3>Holonomic Autonomous Mobile Robot (HAMR) Chassis Design</h3>
                         <p class="design-description">
@@ -777,11 +779,14 @@
 
                 <!-- Design 2: Drone Frame -->
                 <div class="design-card">
-                    <div class="design-image">
+                    <div class="design-image"
+                        data-gallery="drone"
+                        data-images='["assets/designs/mark4-drone.png", "assets/designs/drone-top.png", "assets/designs/drone-side.png", "assets/designs/drone-assembly.png"]'>
                         <img src="assets/designs/mark4-drone.png" alt="Modified Mark4 Drone Frame">
                         <div class="design-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
+                    </div>
                     </div>
                     <div class="design-content">
                         <h3>Custom Mark4 Quadcopter Frame with Onboard Computing</h3>
@@ -820,11 +825,19 @@
                         <div class="design-overlay">
                             <i class="fas fa-search-plus"></i>
                         </div>
+                <div class="design-card">
+                    <div class="design-image"
+                        data-gallery="fs"
+                        data-images='["assets/designs/fs-steering.png", "assets/designs/fs-chassis.png", "assets/designs/fs-suspension.png", "assets/designs/fs-assembly.png"]'>
+                        <img src="assets/designs/fs-steering.png" alt="Formula Student Steering System">
+                        <div class="design-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
                     </div>
                     <div class="design-content">
                         <h3>Formula Student Race Car Chassis and Steering System</h3>
                         <p class="design-description">
-                            Led chassis design and steering geometry for formula-style race car (Team UTTejit FSAE). 
+                            Led chassis design and steering geometry for formula-style race car (Team Uttejit FSAE). 
                             Implemented space frame construction with optimized node placement via FEA. Designed Ackermann 
                             steering with adjustable tie-rod geometry for tunable handling characteristics.
                         </p>
