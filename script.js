@@ -332,24 +332,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ===========================
-// CONSOLE MESSAGE
-// ===========================
-console.log(
-  "%cKartik Virmani - Portfolio",
-  "color: #3b82f6; font-size: 24px; font-weight: bold;"
-);
-console.log(
-  "%cInterested in the code? Check out my GitHub!",
-  "color: #8b5cf6; font-size: 14px;"
-);
-console.log("https://github.com/virmani11kartik");
-
-console.log("Portfolio initialized successfully!");
-
-}); // End of DOMContentLoaded
-
-
-// ===========================
 // CAD IMAGE GALLERY
 // ===========================
 class CADGallery {
@@ -357,6 +339,7 @@ class CADGallery {
     this.currentIndex = 0;
     this.images = [];
     this.galleryTitle = '';
+    this.modal = null;
     this.init();
   }
 
@@ -366,6 +349,8 @@ class CADGallery {
     
     // Add click listeners to design images
     const designImages = document.querySelectorAll('.mechanical-design .design-image');
+    console.log(`Found ${designImages.length} design images`);
+    
     designImages.forEach(img => {
       img.style.cursor = 'pointer';
       img.addEventListener('click', (e) => {
@@ -410,23 +395,19 @@ class CADGallery {
     `;
     
     document.body.insertAdjacentHTML('beforeend', modalHTML);
+    this.modal = document.getElementById('cadGalleryModal');
     
     // Add event listeners
     document.getElementById('galleryClose').addEventListener('click', () => this.closeGallery());
     document.getElementById('galleryPrev').addEventListener('click', () => this.navigate(-1));
     document.getElementById('galleryNext').addEventListener('click', () => this.navigate(1));
     
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') this.closeGallery();
-      if (e.key === 'ArrowLeft') this.navigate(-1);
-      if (e.key === 'ArrowRight') this.navigate(1);
-    });
-    
     // Close on background click
-    document.getElementById('cadGalleryModal').addEventListener('click', (e) => {
+    this.modal.addEventListener('click', (e) => {
       if (e.target.id === 'cadGalleryModal') this.closeGallery();
     });
+    
+    console.log("Gallery modal created");
   }
 
   openGallery(designElement) {
@@ -440,6 +421,7 @@ class CADGallery {
     
     try {
       this.images = JSON.parse(imagesData);
+      console.log('Loaded images:', this.images);
     } catch (e) {
       console.error('Error parsing images data:', e);
       return;
@@ -452,8 +434,7 @@ class CADGallery {
     this.currentIndex = 0;
     
     // Show modal
-    const modal = document.getElementById('cadGalleryModal');
-    modal.classList.add('active');
+    this.modal.classList.add('active');
     document.body.style.overflow = 'hidden';
     
     // Update content
@@ -462,8 +443,7 @@ class CADGallery {
   }
 
   closeGallery() {
-    const modal = document.getElementById('cadGalleryModal');
-    modal.classList.remove('active');
+    this.modal.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -546,7 +526,35 @@ class CADGallery {
   }
 }
 
-// Initialize gallery when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  new CADGallery();
+// Initialize CAD Gallery
+const cadGallery = new CADGallery();
+console.log("CAD Gallery initialized");
+
+// ===========================
+// GALLERY KEYBOARD NAVIGATION
+// ===========================
+document.addEventListener("keydown", (e) => {
+  const modal = document.getElementById('cadGalleryModal');
+  if (modal && modal.classList.contains('active')) {
+    if (e.key === 'Escape') cadGallery.closeGallery();
+    if (e.key === 'ArrowLeft') cadGallery.navigate(-1);
+    if (e.key === 'ArrowRight') cadGallery.navigate(1);
+  }
 });
+
+// ===========================
+// CONSOLE MESSAGE
+// ===========================
+console.log(
+  "%cKartik Virmani - Portfolio",
+  "color: #3b82f6; font-size: 24px; font-weight: bold;"
+);
+console.log(
+  "%cInterested in the code? Check out my GitHub!",
+  "color: #8b5cf6; font-size: 14px;"
+);
+console.log("https://github.com/virmani11kartik");
+
+console.log("Portfolio initialized successfully!");
+
+}); // End of DOMContentLoaded
