@@ -332,7 +332,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ===========================
-// CAD IMAGE GALLERY
+// CAD IMAGE GALLERY - FIXED
 // ===========================
 class CADGallery {
   constructor() {
@@ -340,27 +340,47 @@ class CADGallery {
     this.images = [];
     this.galleryTitle = '';
     this.modal = null;
-    this.init();
   }
 
   init() {
-    // Create modal HTML
+    console.log("Initializing CAD Gallery...");
+    
+    // Create modal HTML first
     this.createModal();
     
-    // Add click listeners to design images
+    // Wait a bit for DOM to be fully ready, then attach listeners
+    setTimeout(() => {
+      this.attachListeners();
+    }, 100);
+  }
+
+  attachListeners() {
     const designImages = document.querySelectorAll('.mechanical-design .design-image');
-    console.log(`Found ${designImages.length} design images`);
+    console.log(`Found ${designImages.length} design images for gallery`);
     
-    designImages.forEach(img => {
+    if (designImages.length === 0) {
+      console.warn("No design images found! Check if .mechanical-design section exists");
+      return;
+    }
+    
+    designImages.forEach((img, index) => {
+      console.log(`Attaching listener to design image ${index + 1}`);
       img.style.cursor = 'pointer';
+      
       img.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
+        console.log("Design image clicked!");
         this.openGallery(img);
       });
     });
+    
+    console.log("✓ Gallery listeners attached");
   }
 
   createModal() {
+    console.log("Creating gallery modal...");
+    
     const modalHTML = `
       <div class="gallery-modal" id="cadGalleryModal">
         <div class="gallery-container">
@@ -397,25 +417,40 @@ class CADGallery {
     document.body.insertAdjacentHTML('beforeend', modalHTML);
     this.modal = document.getElementById('cadGalleryModal');
     
+    if (!this.modal) {
+      console.error("Failed to create modal!");
+      return;
+    }
+    
     // Add event listeners
-    document.getElementById('galleryClose').addEventListener('click', () => this.closeGallery());
-    document.getElementById('galleryPrev').addEventListener('click', () => this.navigate(-1));
-    document.getElementById('galleryNext').addEventListener('click', () => this.navigate(1));
+    const closeBtn = document.getElementById('galleryClose');
+    const prevBtn = document.getElementById('galleryPrev');
+    const nextBtn = document.getElementById('galleryNext');
+    
+    if (closeBtn) closeBtn.addEventListener('click', () => this.closeGallery());
+    if (prevBtn) prevBtn.addEventListener('click', () => this.navigate(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => this.navigate(1));
     
     // Close on background click
     this.modal.addEventListener('click', (e) => {
-      if (e.target.id === 'cadGalleryModal') this.closeGallery();
+      if (e.target.id === 'cadGalleryModal' || e.target.classList.contains('gallery-container')) {
+        this.closeGallery();
+      }
     });
     
-    console.log("Gallery modal created");
+    console.log("✓ Gallery modal created");
   }
 
   openGallery(designElement) {
+    console.log("Opening gallery for element:", designElement);
+    
     // Get images from data attribute
     const imagesData = designElement.getAttribute('data-images');
+    console.log("Images data:", imagesData);
     
     if (!imagesData) {
       console.warn('No images data found for this design');
+      alert('No gallery images configured for this design');
       return;
     }
     
@@ -424,18 +459,32 @@ class CADGallery {
       console.log('Loaded images:', this.images);
     } catch (e) {
       console.error('Error parsing images data:', e);
+      alert('Error loading gallery images');
+      return;
+    }
+    
+    if (this.images.length === 0) {
+      console.warn('No images in gallery');
       return;
     }
     
     // Get title from the card
     const card = designElement.closest('.design-card');
     this.galleryTitle = card ? card.querySelector('h3').textContent : 'CAD Views';
+    console.log("Gallery title:", this.galleryTitle);
     
     this.currentIndex = 0;
     
     // Show modal
+    if (!this.modal) {
+      console.error("Modal not found!");
+      return;
+    }
+    
     this.modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    console.log("Modal opened, updating gallery...");
     
     // Update content
     this.updateGallery();
@@ -443,7 +492,10 @@ class CADGallery {
   }
 
   closeGallery() {
-    this.modal.classList.remove('active');
+    console.log("Closing gallery");
+    if (this.modal) {
+      this.modal.classList.remove('active');
+    }
     document.body.style.overflow = '';
   }
 
@@ -453,6 +505,7 @@ class CADGallery {
     if (this.currentIndex < 0) this.currentIndex = 0;
     if (this.currentIndex >= this.images.length) this.currentIndex = this.images.length - 1;
     
+    console.log(`Navigating to image ${this.currentIndex + 1}`);
     this.updateGallery();
   }
 
@@ -464,6 +517,11 @@ class CADGallery {
     const prevBtn = document.getElementById('galleryPrev');
     const nextBtn = document.getElementById('galleryNext');
     
+    if (!img || !loading || !title || !counter) {
+      console.error("Gallery elements not found!");
+      return;
+    }
+    
     // Show loading
     loading.style.display = 'block';
     img.classList.remove('active');
@@ -473,17 +531,26 @@ class CADGallery {
     counter.textContent = `${this.currentIndex + 1} / ${this.images.length}`;
     
     // Update navigation buttons
-    prevBtn.classList.toggle('disabled', this.currentIndex === 0);
-    nextBtn.classList.toggle('disabled', this.currentIndex === this.images.length - 1);
+    if (prevBtn) prevBtn.classList.toggle('disabled', this.currentIndex === 0);
+    if (nextBtn) nextBtn.classList.toggle('disabled', this.currentIndex === this.images.length - 1);
     
     // Load image
+    const imagePath = this.images[this.currentIndex];
+    console.log("Loading image:", imagePath);
+    
     const newImg = new Image();
     newImg.onload = () => {
-      img.src = this.images[this.currentIndex];
+      console.log("Image loaded successfully");
+      img.src = imagePath;
       loading.style.display = 'none';
       setTimeout(() => img.classList.add('active'), 50);
     };
-    newImg.src = this.images[this.currentIndex];
+    newImg.onerror = () => {
+      console.error("Failed to load image:", imagePath);
+      loading.style.display = 'none';
+      img.alt = "Failed to load image";
+    };
+    newImg.src = imagePath;
     
     // Update thumbnails
     this.updateThumbnails();
@@ -491,6 +558,8 @@ class CADGallery {
 
   createThumbnails() {
     const container = document.getElementById('galleryThumbnails');
+    if (!container) return;
+    
     container.innerHTML = '';
     
     this.images.forEach((src, index) => {
@@ -510,6 +579,8 @@ class CADGallery {
       
       container.appendChild(thumb);
     });
+    
+    console.log(`Created ${this.images.length} thumbnails`);
   }
 
   updateThumbnails() {
@@ -526,35 +597,28 @@ class CADGallery {
   }
 }
 
-// Initialize CAD Gallery
-const cadGallery = new CADGallery();
-console.log("CAD Gallery initialized");
+// Initialize CAD Gallery - with delay to ensure DOM is ready
+let cadGallery;
+setTimeout(() => {
+  cadGallery = new CADGallery();
+  cadGallery.init();
+  console.log("✓ CAD Gallery initialized");
+}, 500);
 
 // ===========================
 // GALLERY KEYBOARD NAVIGATION
 // ===========================
 document.addEventListener("keydown", (e) => {
   const modal = document.getElementById('cadGalleryModal');
-  if (modal && modal.classList.contains('active')) {
-    if (e.key === 'Escape') cadGallery.closeGallery();
-    if (e.key === 'ArrowLeft') cadGallery.navigate(-1);
-    if (e.key === 'ArrowRight') cadGallery.navigate(1);
+  if (modal && modal.classList.contains('active') && cadGallery) {
+    if (e.key === 'Escape') {
+      cadGallery.closeGallery();
+    }
+    if (e.key === 'ArrowLeft') {
+      cadGallery.navigate(-1);
+    }
+    if (e.key === 'ArrowRight') {
+      cadGallery.navigate(1);
+    }
   }
 });
-
-// ===========================
-// CONSOLE MESSAGE
-// ===========================
-console.log(
-  "%cKartik Virmani - Portfolio",
-  "color: #3b82f6; font-size: 24px; font-weight: bold;"
-);
-console.log(
-  "%cInterested in the code? Check out my GitHub!",
-  "color: #8b5cf6; font-size: 14px;"
-);
-console.log("https://github.com/virmani11kartik");
-
-console.log("Portfolio initialized successfully!");
-
-}); // End of DOMContentLoaded
