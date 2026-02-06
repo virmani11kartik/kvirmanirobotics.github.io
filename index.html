@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="script.js" defer></script>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -903,177 +904,126 @@
       </section>
     <!-- Publications Section -->
     <section id="publications" class="publications">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Academic contributions</span>
-                <h2 class="section-title">Research Publications</h2>
-                <p class="section-subtitle">
-                    Peer-reviewed research in aerodynamics, materials science, and sustainable systems
-                </p>
+    <div class="container">
+        <div class="section-header">
+        <span class="section-label">Academic contributions</span>
+        <h2 class="section-title">Research Publications</h2>
+        <p class="section-subtitle">
+            Peer-reviewed research in aerodynamics, materials science, and sustainable systems
+        </p>
+        </div>
+
+        <div class="publications-list">
+
+        <!-- Publication 1 -->
+        <div class="publication-card">
+            <div class="pub-hero"
+                style="background-image:url('assets/publications/pitch.jpg')"
+                onclick="window.open('https://saemobilus.sae.org/papers/computational-analysis-pitch-sensitivity-a-concept-race-car-2022-01-5065','_blank')">
+            <div class="pub-hero-overlay">
+                <i class="fas fa-external-link-alt"></i>
+            </div>
             </div>
 
-            <div class="publications-list">
-                <!-- Publication 1 -->
-                <div class="publication-card">
-                    <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="pub-info">
-                            <h3>Computational Analysis of Pitch Sensitivity for a Concept Race Car</h3>
-                            <div class="pub-meta">
-                                <span class="pub-venue">SAE Technical Papers</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-date">October 2022</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-type">Conference Paper</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="pub-abstract">
-                        Investigated aerodynamic pitch sensitivity of Le Mans Grand Touring Prototype (LMGTP) race cars 
-                        through CFD simulation. Validated k-omega turbulence model against Ahmed Body studies (1.013% error). 
-                        Demonstrated 1872N destabilizing lift force at +2.5° pitch, correlating CFD results with theoretical 
-                        stability derivatives via MATLAB Simulink. Findings directly informed chassis design for Formula Student vehicle.
-                    </p>
-                    <div class="pub-footer">
-                        <span class="pub-authors">
-                            <i class="fas fa-users"></i>
-                            K. Virmani, et al.
-                        </span>
-                        <a href="https://saemobilus.sae.org/papers/computational-analysis-pitch-sensitivity-a-concept-race-car-2022-01-5065" 
-                           target="_blank" class="pub-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Publication
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Publication 2 -->
-                <div class="publication-card">
-                    <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="pub-info">
-                            <h3>Nanomaterials for Automotive Outer Panel Components: A Review</h3>
-                            <div class="pub-meta">
-                                <span class="pub-venue">The European Physical Journal Plus (Springer)</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-date">September 2021</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-type">Journal Article</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="pub-abstract">
-                        Comprehensive review of nanomaterial composite applications in automotive body panels. Analyzed 
-                        tribological, rheological, electrical, and optical properties for lightweighting and sustainability. 
-                        Examined manufacturing techniques and material tradeoffs for carbon footprint reduction in vehicle 
-                        design, providing framework for next-generation automotive materials selection.
-                    </p>
-                    <div class="pub-footer">
-                        <span class="pub-authors">
-                            <i class="fas fa-users"></i>
-                            K. Virmani, et al.
-                        </span>
-                        <a href="https://doi.org/10.1140/epjp/s13360-021-01931-w" 
-                           target="_blank" class="pub-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Publication
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Publication 3 -->
-                <div class="publication-card">
-                    <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="pub-info">
-                            <h3>Smart Power Management System for Charging Plug-in Hybrid/Electric Vehicles Using Solar PV</h3>
-                            <div class="pub-meta">
-                                <span class="pub-venue">Springer Lecture Notes in Mechanical Engineering</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-date">March 2021</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-type">Conference Proceedings</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="pub-abstract">
-                        Developed MATLAB Simulink model for solar PV-powered EV charging infrastructure at software technology 
-                        parks in Chennai, India. Designed microcontroller-based smart power management strategies for optimal 
-                        charging schedules. Determined PV module configuration, battery storage requirements, and system cost 
-                        estimates for scalable renewable energy integration.
-                    </p>
-                    <div class="pub-footer">
-                        <span class="pub-authors">
-                            <i class="fas fa-users"></i>
-                            K. Virmani, et al.
-                        </span>
-                        <a href="https://doi.org/10.1007/978-981-33-6753-1_7" 
-                           target="_blank" class="pub-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Publication
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Publication 4 -->
-                <div class="publication-card">
-                    <div class="pub-header">
-                        <div class="pub-icon">
-                            <i class="fas fa-file-alt"></i>
-                        </div>
-                        <div class="pub-info">
-                            <h3>Design Optimization of Friction Lining of a Clutch Plate</h3>
-                            <div class="pub-meta">
-                                <span class="pub-venue">Materials Today: Proceedings (Elsevier)</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-date">March 2021</span>
-                                <span class="pub-dot">•</span>
-                                <span class="pub-type">Journal Article</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="pub-abstract">
-                        Conducted FEA-based material selection and optimization for automotive clutch friction linings under 
-                        combined thermal and torsional loads. Compared conventional and advanced materials via ANSYS simulation 
-                        using uniform pressure and wear theory. Identified optimal friction material for light commercial vehicles, 
-                        providing methodology extensible to other vehicle classes.
-                    </p>
-                    <div class="pub-footer">
-                        <span class="pub-authors">
-                            <i class="fas fa-users"></i>
-                            K. Virmani, et al.
-                        </span>
-                        <a href="https://doi.org/10.1016/j.matpr.2021.02.775" 
-                           target="_blank" class="pub-link">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Publication
-                        </a>
-                    </div>
-                </div>
+            <div class="pub-content">
+            <h3>Computational Analysis of Pitch Sensitivity for a Concept Race Car</h3>
+            <div class="pub-meta">
+                <span>SAE Technical Papers</span> • <span>Oct 2022</span> • <span>Conference Paper</span>
             </div>
-
-            <div class="pub-stats">
-                <div class="stat-box">
-                    <div class="stat-num">4</div>
-                    <div class="stat-label">Peer-Reviewed Publications</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">3</div>
-                    <div class="stat-label">Research Domains</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">2</div>
-                    <div class="stat-label">Major Publishers</div>
-                </div>
+            <p class="pub-abstract">
+                Investigated aerodynamic pitch sensitivity of Le Mans Grand Touring Prototype (LMGTP) race cars
+                through CFD simulation. Validated k-omega turbulence model against Ahmed Body studies (1.013% error).
+                Demonstrated 1872N destabilizing lift at +2.5° pitch, informing Formula Student chassis design.
+            </p>
             </div>
         </div>
+
+        <!-- Publication 2 -->
+        <div class="publication-card">
+            <div class="pub-hero"
+                style="background-image:url('assets/publications/nano.jpg')"
+                onclick="window.open('https://doi.org/10.1140/epjp/s13360-021-01931-w','_blank')">
+            <div class="pub-hero-overlay">
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+            </div>
+
+            <div class="pub-content">
+            <h3>Nanomaterials for Automotive Outer Panel Components: A Review</h3>
+            <div class="pub-meta">
+                <span>EPJ Plus (Springer)</span> • <span>Sep 2021</span> • <span>Journal Article</span>
+            </div>
+            <p class="pub-abstract">
+                Reviewed nanomaterial composites for automotive body panels, analyzing tribological, electrical,
+                and sustainability tradeoffs. Provided a framework for lightweight and low-carbon vehicle design.
+            </p>
+            </div>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="publication-card">
+            <div class="pub-hero"
+                style="background-image:url('assets/publications/solar.jpg')"
+                onclick="window.open('https://doi.org/10.1007/978-981-33-6753-1_7','_blank')">
+            <div class="pub-hero-overlay">
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+            </div>
+
+            <div class="pub-content">
+            <h3>Smart Power Management System for Charging Plug-in Hybrid/Electric Vehicles Using Solar PV</h3>
+            <div class="pub-meta">
+                <span>Springer LNME</span> • <span>Mar 2021</span> • <span>Conference Proceedings</span>
+            </div>
+            <p class="pub-abstract">
+                Designed MATLAB/Simulink models for solar-powered EV charging infrastructure.
+                Optimized PV sizing, battery storage, and control strategies for scalable deployment.
+            </p>
+            </div>
+        </div>
+
+        <!-- Publication 4 -->
+        <div class="publication-card">
+            <div class="pub-hero"
+                style="background-image:url('assets/publications/clutch.jpg')"
+                onclick="window.open('https://doi.org/10.1016/j.matpr.2021.02.775','_blank')">
+            <div class="pub-hero-overlay">
+                <i class="fas fa-external-link-alt"></i>
+            </div>
+            </div>
+
+            <div class="pub-content">
+            <h3>Design Optimization of Friction Lining of a Clutch Plate</h3>
+            <div class="pub-meta">
+                <span>Materials Today: Proceedings</span> • <span>Mar 2021</span> • <span>Journal Article</span>
+            </div>
+            <p class="pub-abstract">
+                Performed FEA-driven optimization of automotive clutch friction linings under
+                combined thermal and torsional loads, identifying optimal material configurations.
+            </p>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="pub-stats">
+        <div class="stat-box">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Research Domains</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Major Publishers</div>
+        </div>
+        </div>
+    </div>
     </section>
+
+
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -1329,4 +1279,4 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Kartik Virmani. All rights reserve
+                <p>&copy; 2026 Kartik Virmani. All rights reserved.</p>

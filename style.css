@@ -1772,6 +1772,10 @@ section {
   opacity: 1;
 }
 
+.design-overlay {
+  pointer-events: none;
+}
+
 .design-overlay i {
   font-size: 3rem;
   color: #ffffff;
@@ -2367,4 +2371,44 @@ section {
     width: 80px;
     height: 56px;
   }
+}
+
+.pub-hero {
+  position: relative;
+  height: 180px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.pub-hero:hover {
+  transform: scale(1.015);
+  box-shadow: var(--shadow-lg);
+}
+
+.pub-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  transition: opacity 0.3s ease;
+}
+
+.pub-hero:hover .pub-hero-overlay {
+  opacity: 1;
+}
+
+.pub-hero-overlay i {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.pub-content {
+  padding-top: 1rem;
 }
