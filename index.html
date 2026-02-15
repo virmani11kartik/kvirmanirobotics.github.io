@@ -1236,7 +1236,7 @@
                 </div>
 
                 <div class="contact-form-section">
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkovrvql" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
@@ -1255,11 +1255,20 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or opportunity..." required></textarea>
                         </div>
+                        
+                        <!-- Hidden field for Formspree -->
+                        <input type="hidden" name="_subject" value="New contact form submission!">
+                        
                         <button type="submit" class="btn btn-primary btn-block">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
                     </form>
+                    
+                    <!-- Success message (optional - add this div after the form) -->
+                    <div id="form-success" style="display: none; padding: 20px; background: #d4f4dd; border-radius: 8px; margin-top: 20px;">
+                        <p style="margin: 0; color: #155724;">✓ Message sent successfully! I'll get back to you soon.</p>
+                    </div>
                 </div>
             </div>
         </div>
