@@ -683,6 +683,31 @@ section {
   border-color: var(--border-strong);
 }
 
+.about-card-penn {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card-penn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8, 12, 20, 0.65), rgba(10, 14, 24, 0.85));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-card-penn > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-card-penn h3,
+.about-card-penn p,
+.about-card-penn .card-icon i {
+  color: #ffffff;
+}
+
 .card-icon {
   width: 56px;
   height: 56px;
@@ -738,6 +763,63 @@ section {
 .edu-item:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+.edu-item-penn,
+.edu-item-vellore {
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-item-penn::before,
+.edu-item-vellore::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8, 12, 20, 0.68), rgba(10, 14, 24, 0.88));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.edu-item-penn > *,
+.edu-item-vellore > * {
+  position: relative;
+  z-index: 1;
+}
+
+.edu-item-penn .edu-icon,
+.edu-item-vellore .edu-icon {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.edu-item-penn .edu-logo,
+.edu-item-vellore .edu-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.edu-item-penn .edu-header h4,
+.edu-item-penn .edu-date,
+.edu-item-penn .edu-school,
+.edu-item-penn .edu-major,
+.edu-item-penn .edu-focus,
+.edu-item-vellore .edu-header h4,
+.edu-item-vellore .edu-date,
+.edu-item-vellore .edu-school,
+.edu-item-vellore .edu-major,
+.edu-item-vellore .edu-focus {
+  color: #ffffff;
+}
+
+.edu-item-penn .edu-date,
+.edu-item-vellore .edu-date {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.edu-item-penn .edu-content p,
+.edu-item-vellore .edu-content p {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .edu-icon {
@@ -815,12 +897,65 @@ section {
   padding: 2.5rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
 
 .exp-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--accent-primary);
+}
+
+.exp-card-eil::before,
+.exp-card-modlab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(6, 10, 18, 0.68), rgba(8, 12, 20, 0.82));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.exp-card-eil > *,
+.exp-card-modlab > * {
+  position: relative;
+  z-index: 1;
+}
+
+.exp-card-eil .company-info h3,
+.exp-card-eil .company-info h4,
+.exp-card-eil .exp-date,
+.exp-card-eil .exp-achievements span,
+.exp-card-eil .exp-tags span,
+.exp-card-modlab .company-info h3,
+.exp-card-modlab .company-info h4,
+.exp-card-modlab .exp-date,
+.exp-card-modlab .exp-achievements span,
+.exp-card-modlab .exp-tags span {
+  color: #ffffff;
+}
+
+.exp-card-eil .exp-tag,
+.exp-card-modlab .exp-tag {
+  background: rgba(0, 0, 0, 0.28);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.about-card-penn h3,
+.about-card-penn p,
+.about-card-penn .card-icon i {
+  color: #ffffff;
+}
+
+.about-card-penn .card-icon {
+  background: rgba(255,255,255,0.15);
+}
+
+.exp-card-eil .exp-date,
+.exp-card-modlab .exp-date {
+  background: rgba(255,255,255,0.12);
 }
 
 .exp-header {
